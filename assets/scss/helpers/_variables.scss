@@ -1,0 +1,17 @@
+// Colors
+$color-white: #ffffff;
+$color-black: #333333;
+$color-primary: #295dee;
+$color-secondary: #e1ee29;
+
+// Option transition
+$duration: 0.8s;
+$ease-in-out: cubic-bezier(0.445, 0.050, 0.550, 0.950);
+$ease-in: cubic-bezier(0.470, 0.000, 0.745, 0.715);
+$ease-out: cubic-bezier(0.390, 0.575, 0.565, 1.000);
+
+// Responsive
+$info-tablet-horizontal: "only screen and (max-width : 1160px)";
+$info-tablet-vertical: "only screen and (max-width : 900px)";
+$info-phone: "only screen and (max-width : 767px)";
+$info-phone-4: "only screen and (max-width : 320px)";

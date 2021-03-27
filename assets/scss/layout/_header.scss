@@ -1,14 +1,14 @@
 // Header
 .header {
   img {
-    width: 18vw;
+    width: 8vw;
     height: 100%;
-    margin: 2vw 5vw;
+    margin: 1vw 4vw;
 
     // Laptop 1440
     @media #{$info-laptop-medium} {
-        width: 18vw;
-        margin: 2vw 5vw;
+        width: 12vw;
+        margin: 1vw 4vw;
     }
 
     // Laptop 1368

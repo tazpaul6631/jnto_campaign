@@ -16,27 +16,27 @@ $(document).ready(function () {
     autoplaySpeed: 5000,
     fade: true,
     prevArrow: false,
-    nextArrow: false,
-    // responsive: [
-    //     {
-    //         breakpoint: 768,
-    //         settings: {
-    //             infinite: true,
-    //             autoplay: true,
-    //             autoplaySpeed: 5000,
-    //             fade: true,
-    //         }
-    //     }
-    // ]
+    nextArrow: false
   });
 
   ////////////////////////////////////////////
   // Slick Photo
   $(".photo-silder").slick({
     dots: true,
-    prevArrow: ".btn-prev",
-    nextArrow: ".btn-next",
+    // prevArrow: ".btn-prev",
+    // nextArrow: ".btn-next",
     infinite: true,
+    responsive: [
+      {
+          breakpoint: 1025,
+          settings: {
+              infinite: true,
+              autoplay: true,
+              autoplaySpeed: 5000,
+              fade: true,
+          }
+      }
+  ]
   });
 
   ////////////////////////////////
@@ -177,6 +177,14 @@ function goFurther() {
 function readURL(input) {
   if (input.files && input.files[0]) {
     var reader = new FileReader();
+    const type = input.files.type
+    const enumType = ['image/jpg', 'image/jpeg', 'image/png']
+
+    // if (!enumType.includes(type)) {
+    //   alert('Hình Sai Định Dạng')
+
+    //   return
+    // }
 
     reader.onload = function (e) {
       $(".image-upload-wrap").hide();

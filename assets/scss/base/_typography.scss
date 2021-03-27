@@ -2,16 +2,37 @@
 
 html, body {
   font-size: 16px;
-  font-family: 'Helvetica Neue', Helvetica, Arial, sans-serif;
+  font-family: 'Verdana', BrushScript;
   -webkit-font-smoothing: antialiased;
-  @media #{$info-tablet-horizontal} {
-    font-size: 15px;
-  }
+  // @media #{$info-tablet-horizontal} {
+  //   font-size: 15px;
+  // }
 
-  @media #{$info-tablet-vertical} {
-    font-size: 14px;
-  }
-  @media #{$info-phone} {
-    font-size: 12px;
-  }
+  // @media #{$info-tablet-vertical} {
+  //   font-size: 14px;
+  // }
+  // @media #{$info-phone} {
+  //   font-size: 12px;
+  // }
+}
+
+@font-face {
+  font-family: 'UTMAvoBold'; 
+  src: url('../fonts/UTMAvoBold.ttf') format('truetype');
+}
+@font-face {
+  font-family: 'BrushScript'; 
+  src: url('../fonts/BrushScript.ttf') format('truetype');
+}
+@font-face {
+  font-family: 'Verdana'; 
+  src: url('../fonts/Verdana.ttf') format('truetype');
+}
+@font-face {
+  font-family: 'CourierNew'; 
+  src: url('../fonts/CourierNew.ttf') format('truetype');
+}
+@font-face {
+  font-family: 'SVN-Revolution'; 
+  src: url('../fonts/SVN-Revolution.ttf') format('truetype');
 }

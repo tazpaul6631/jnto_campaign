@@ -9,7 +9,5 @@
   },
   "author": "",
   "license": "ISC",
-  "dependencies": {
-    "slick-carousel": "^1.8.1"
-  }
+  "dependencies": {}
 }

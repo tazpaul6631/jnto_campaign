@@ -26,24 +26,23 @@ img {
 
 // Section Container
 .container {
-  max-width: 1170px;
+  max-width: 1280px;
   margin: 0 auto;
 
   // Laptop 1440
   @media #{$info-laptop-medium} {
-    max-width: 1200px;
-    margin: 0 auto;
+    max-width: 1024px;
   }
 
   // Laptop 1368
   @media #{$info-laptop-normal} {
-    max-width: 1200px;
+    max-width: 1170px;
     margin: 0 auto;
   }
 
   // Laptop 1280
   @media #{$info-laptop-small} {
-    max-width: 1100px;
+    max-width: 1170px;
     margin: 0 auto;
   }
   
@@ -54,16 +53,16 @@ img {
 
   // Ipad Pro
   @media #{$info-ipad-pro} {
-    max-width: calc(100% - 50px);
+    max-width: calc(100% - 90px);
   }
 
   // Ipad
   @media #{$info-ipad} {
-    max-width: calc(100% - 40px);
+    max-width: calc(100% - 80px);
   }
 
   // Phone
   @media #{$info-phone-normal} {
-    max-width: calc(100% - 15px);
+    max-width: calc(100% - 60px);
   }
 }

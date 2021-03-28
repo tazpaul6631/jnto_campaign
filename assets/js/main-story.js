@@ -16,7 +16,7 @@ $(document).ready(function () {
     autoplaySpeed: 5000,
     fade: true,
     prevArrow: false,
-    nextArrow: false
+    nextArrow: false,
   });
 
   ////////////////////////////////////////////
@@ -26,15 +26,15 @@ $(document).ready(function () {
     infinite: true,
     responsive: [
       {
-          breakpoint: 1025,
-          settings: {
-              infinite: true,
-              autoplay: true,
-              autoplaySpeed: 5000,
-              fade: true,
-          }
-      }
-  ]
+        breakpoint: 1025,
+        settings: {
+          infinite: true,
+          autoplay: true,
+          autoplaySpeed: 5000,
+          fade: true,
+        },
+      },
+    ],
   });
 
   ////////////////////////////////
@@ -53,7 +53,6 @@ $(document).ready(function () {
 
   ////////////////////////////
   //VALIDATE
-
   let form = document.getElementById("group-form-input");
   let name = document.getElementById("name");
   let username = document.getElementById("username");
@@ -134,7 +133,7 @@ $(document).ready(function () {
 
   ////////////////////////////////////
   // Back To Top
-  var btn = $("#button");
+  var btn = $("#button__story");
   const headerHeight = document.getElementById("header").clientHeight;
   const sectionBannerHeight = document.getElementById("section-banner")
     .clientHeight;
@@ -173,16 +172,18 @@ function goFurther() {
 ///////////////////////////////////////////
 // File upload img
 function readURL(input) {
-  if (input.files && input.files[0]) {
+  var selectedFile = input.files[0];
+  var idxDot = selectedFile.name.lastIndexOf(".") + 1;
+  var extFile = selectedFile.name
+    .substr(idxDot, selectedFile.name.length)
+    .toLowerCase();
+  if (
+    extFile == "jpg" ||
+    extFile == "jpeg" ||
+    extFile == "png" ||
+    extFile == "gif"
+  ) {
     var reader = new FileReader();
-    const type = input.files.type
-    const enumType = ['image/jpg', 'image/jpeg', 'image/png']
-
-    // if (!enumType.includes(type)) {
-    //   alert('Hình Sai Định Dạng')
-
-    //   return
-    // }
 
     reader.onload = function (e) {
       $(".image-upload-wrap").hide();
@@ -195,7 +196,7 @@ function readURL(input) {
 
     reader.readAsDataURL(input.files[0]);
   } else {
-    removeUpload();
+    alert("Only jpg/jpeg, png and gif files are allowed!");
   }
 }
 

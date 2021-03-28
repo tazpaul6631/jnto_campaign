@@ -30,8 +30,8 @@
 
     .button-top {
       background-color: #e70c23;
-      width: 50px;
-      height: 50px;
+      width: 40px;
+      height: 40px;
       text-align: center;
       border-radius: 4px;
       display: inline-block;
@@ -42,7 +42,7 @@
         font-weight: normal;
         font-style: normal;
         font-size: 30px;
-        line-height: 47px;
+        line-height: 39px;
         color: #fff;
       }
 
@@ -112,15 +112,9 @@
       text-orientation: mixed;
       margin: 0 auto;
       margin-top: 18px;
-      font-size: 30px;
+      font-size: 25px;
       font-family: Verdana;
       cursor: pointer;
-
-      // Laptop 1440
-      @media #{$info-laptop-medium} {
-        margin-top: 18px;
-        font-size: 25px;
-      }
 
       // Laptop 1280
       @media #{$info-laptop-small} {
@@ -502,7 +496,7 @@
       @media #{$info-laptop-small} {
         border-top: 10px solid transparent;
         border-bottom: 10px solid transparent;
-        border-right: 20px solid #e70c23;
+        border-left: 20px solid #e70c23;
       }
     }
 
@@ -535,12 +529,12 @@
 
       // Laptop 1440
       @media #{$info-laptop-medium} {
-        grid-column-gap: 94px;
+        grid-column-gap: 72px;
       }
 
       // Laptop 1368
       @media #{$info-laptop-normal} {
-        grid-column-gap: 86px;
+        grid-column-gap: 65px;
       }
 
       // Laptop 1280
@@ -550,7 +544,7 @@
 
       // Ipad Pro
       @media #{$info-laptop-smallest} {
-        grid-column-gap: 30px;
+        grid-column-gap: 40px;
         grid-row-gap: 30px;
         justify-content: center;
       }
@@ -580,6 +574,11 @@
         height: 340px;
       }
 
+      // Laptop 1366
+      @media #{$info-laptop-normal} {
+        height: 300px;
+      }
+
       // Laptop 1280
       @media #{$info-laptop-small} {
         height: 260px;
@@ -599,6 +598,11 @@
         height: 270px;
         width: 100%;
 
+        // Laptop 1368
+        @media #{$info-laptop-normal} {
+          height: 240px
+        }
+
         // Laptop 1280
         @media #{$info-laptop-small} {
           height: 230px;
@@ -616,7 +620,7 @@
 
         // Phone
         @media #{$info-phone-normal} {
-          height: 160px;
+          height: 135px;
         }
 
         img {
@@ -744,7 +748,7 @@
 
     // Laptop 1368
     @media #{$info-laptop-normal} {
-      height: 585px;
+      height: 628px;
     }
 
     // Laptop 1280
@@ -883,7 +887,7 @@
 
     h3 {
       font-family: BrushScript;
-      font-size: 40px;
+      font-size: 45px;
       padding-top: 60px;
 
       // Laptop 1368
@@ -930,7 +934,7 @@
         }
 
         h4 {
-          font-size: 30px;
+          font-size: 35px;
           font-family: UTMAvoBold;
           color: #e70c23;
           margin-bottom: 10px;
@@ -1502,16 +1506,16 @@
         color: white;
         font-weight: bold;
 
-        // Laptop 1280
-        @media #{$info-laptop-small} {
-          width: 80%;
-          margin: 0 auto;
-        }
+        // // Laptop 1280
+        // @media #{$info-laptop-small} {
+        //   width: 80%;
+        //   margin: 0 auto;
+        // }
 
-        // Phone
-        @media #{$info-phone-normal} {
-          width: 100%;
-        }
+        // // Phone
+        // @media #{$info-phone-normal} {
+        //   width: 100%;
+        // }
 
         p {
           font-size: 20px;
@@ -1532,6 +1536,7 @@
           // Phone
           @media #{$info-phone-normal} {
             padding-left: 10px;
+            font-size: 12px;
           }
         }
       }
@@ -1542,7 +1547,7 @@
         border-radius: 30px;
         position: relative;
         height: 300px;
-        width: 98%;
+        // width: 98%;
 
         &:hover {
           background-color: rgba(237, 88, 110, 0.1);
@@ -1566,7 +1571,7 @@
           border: 3px dashed #ed586e;
           height: 200px;
           margin: 10px auto;
-          width: 78%;
+          // width: 78%;
 
           &:hover {
             background-color: rgba(237, 88, 110, 0.1);
@@ -1577,7 +1582,7 @@
         // Phone
         @media #{$info-phone-normal} {
           height: 150px;
-          width: 98%;
+          // width: 98%;
           margin: 10px auto;
 
           &:hover {
@@ -1787,7 +1792,7 @@
         // Laptop 1280
         @media #{$info-laptop-small} {
           margin-bottom: 15px;
-          width: 80%;
+          // width: 80%;
           margin: 0 auto;
         }
 
@@ -1835,34 +1840,16 @@
           position: relative;
           margin-bottom: 38px;
           padding-bottom: 38px;
-          max-width: 968px;
           margin: 0 auto;
 
           // Laptop 1440
           @media #{$info-laptop-medium} {
-            max-width: 768px;
             padding-bottom: 30px;
           }
 
           // Laptop 1280
           @media #{$info-laptop-small} {
-            max-width: 600px;
             padding-bottom: 25px;
-          }
-
-          // Ipad
-          @media #{$info-ipad} {
-            max-width: 500px;
-          }
-
-          // Phone
-          @media #{$info-phone-normal} {
-            max-width: 330px;
-          }
-
-          // Phone Small
-          @media #{$info-phone-small} {
-            max-width: 290px;
           }
 
           .label-left {

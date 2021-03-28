@@ -4903,8 +4903,8 @@ img {
         right: 3px; } }
     .main #button .button-top {
       background-color: #e70c23;
-      width: 50px;
-      height: 50px;
+      width: 40px;
+      height: 40px;
       text-align: center;
       border-radius: 4px;
       display: inline-block; }
@@ -4914,7 +4914,7 @@ img {
         font-weight: normal;
         font-style: normal;
         font-size: 30px;
-        line-height: 47px;
+        line-height: 39px;
         color: #fff; }
       .main #button .button-top:hover {
         cursor: pointer;
@@ -4959,13 +4959,9 @@ img {
       text-orientation: mixed;
       margin: 0 auto;
       margin-top: 18px;
-      font-size: 30px;
+      font-size: 25px;
       font-family: Verdana;
       cursor: pointer; }
-      @media only screen and (max-width: 1440px) {
-        .main #button p {
-          margin-top: 18px;
-          font-size: 25px; } }
       @media only screen and (max-width: 1280px) {
         .main #button p {
           margin-top: 10px;
@@ -5283,7 +5279,7 @@ img {
         .section-photo .slick-next::before {
           border-top: 10px solid transparent;
           border-bottom: 10px solid transparent;
-          border-right: 20px solid #e70c23; } }
+          border-left: 20px solid #e70c23; } }
     @media only screen and (max-width: 1440px) {
       .section-photo .slick-next {
         right: -110px; } }
@@ -5304,16 +5300,16 @@ img {
     justify-items: center; }
     @media only screen and (max-width: 1440px) {
       .section-photo .photo-silder .photo-item {
-        grid-column-gap: 94px; } }
+        grid-column-gap: 72px; } }
     @media only screen and (max-width: 1368px) {
       .section-photo .photo-silder .photo-item {
-        grid-column-gap: 86px; } }
+        grid-column-gap: 65px; } }
     @media only screen and (max-width: 1280px) {
       .section-photo .photo-silder .photo-item {
         grid-column-gap: 58px; } }
     @media only screen and (max-width: 1200px) {
       .section-photo .photo-silder .photo-item {
-        grid-column-gap: 30px;
+        grid-column-gap: 40px;
         grid-row-gap: 30px;
         justify-content: center; } }
     @media only screen and (max-width: 768px) {
@@ -5336,6 +5332,9 @@ img {
     @media only screen and (max-width: 1440px) {
       .section-photo .photo-silder .image-photo {
         height: 340px; } }
+    @media only screen and (max-width: 1368px) {
+      .section-photo .photo-silder .image-photo {
+        height: 300px; } }
     @media only screen and (max-width: 1280px) {
       .section-photo .photo-silder .image-photo {
         height: 260px; } }
@@ -5348,6 +5347,9 @@ img {
     .section-photo .photo-silder .image-photo .image {
       height: 270px;
       width: 100%; }
+      @media only screen and (max-width: 1368px) {
+        .section-photo .photo-silder .image-photo .image {
+          height: 240px; } }
       @media only screen and (max-width: 1280px) {
         .section-photo .photo-silder .image-photo .image {
           height: 230px; } }
@@ -5359,7 +5361,7 @@ img {
           height: 160px; } }
       @media only screen and (max-width: 576px) {
         .section-photo .photo-silder .image-photo .image {
-          height: 160px; } }
+          height: 135px; } }
       .section-photo .photo-silder .image-photo .image img {
         border-radius: 30px;
         cursor: pointer;
@@ -5439,7 +5441,7 @@ img {
     height: 700px; }
     @media only screen and (max-width: 1368px) {
       .section-souvenir .souvenir-img {
-        height: 585px; } }
+        height: 628px; } }
     @media only screen and (max-width: 1280px) {
       .section-souvenir .souvenir-img {
         height: 580px; } }
@@ -5527,7 +5529,7 @@ img {
   background-position: center; }
   .section-rules .image-rules h3 {
     font-family: BrushScript;
-    font-size: 40px;
+    font-size: 45px;
     padding-top: 60px; }
     @media only screen and (max-width: 1368px) {
       .section-rules .image-rules h3 {
@@ -5559,7 +5561,7 @@ img {
         .section-rules .image-rules .group-rules .text-rule {
           margin-right: 0; } }
       .section-rules .image-rules .group-rules .text-rule h4 {
-        font-size: 30px;
+        font-size: 35px;
         font-family: UTMAvoBold;
         color: #e70c23;
         margin-bottom: 10px; }
@@ -5958,13 +5960,6 @@ img {
     background-color: #ed586e;
     color: white;
     font-weight: bold; }
-    @media only screen and (max-width: 1280px) {
-      .section-form .image-form .form-file-image .title-form-file {
-        width: 80%;
-        margin: 0 auto; } }
-    @media only screen and (max-width: 576px) {
-      .section-form .image-form .form-file-image .title-form-file {
-        width: 100%; } }
     .section-form .image-form .form-file-image .title-form-file p {
       font-size: 20px;
       font-family: Verdana;
@@ -5978,14 +5973,14 @@ img {
           font-size: 14px; } }
       @media only screen and (max-width: 576px) {
         .section-form .image-form .form-file-image .title-form-file p {
-          padding-left: 10px; } }
+          padding-left: 10px;
+          font-size: 12px; } }
   .section-form .image-form .form-file-image .image-upload-wrap {
     margin: 20px auto;
     border: 5px dashed #ed586e;
     border-radius: 30px;
     position: relative;
-    height: 300px;
-    width: 98%; }
+    height: 300px; }
     .section-form .image-form .form-file-image .image-upload-wrap:hover {
       background-color: rgba(237, 88, 110, 0.1);
       border: 5px dashed #ed586e; }
@@ -6001,15 +5996,13 @@ img {
       .section-form .image-form .form-file-image .image-upload-wrap {
         border: 3px dashed #ed586e;
         height: 200px;
-        margin: 10px auto;
-        width: 78%; }
+        margin: 10px auto; }
         .section-form .image-form .form-file-image .image-upload-wrap:hover {
           background-color: rgba(237, 88, 110, 0.1);
           border: 2.5px dashed #ed586e; } }
     @media only screen and (max-width: 576px) {
       .section-form .image-form .form-file-image .image-upload-wrap {
         height: 150px;
-        width: 98%;
         margin: 10px auto; }
         .section-form .image-form .form-file-image .image-upload-wrap:hover {
           background-color: rgba(237, 88, 110, 0.1);
@@ -6156,7 +6149,6 @@ img {
     @media only screen and (max-width: 1280px) {
       .section-form .image-form .form-inputs .title-form-input {
         margin-bottom: 15px;
-        width: 80%;
         margin: 0 auto; } }
     @media only screen and (max-width: 576px) {
       .section-form .image-form .form-inputs .title-form-input {
@@ -6191,25 +6183,13 @@ img {
       position: relative;
       margin-bottom: 38px;
       padding-bottom: 38px;
-      max-width: 968px;
       margin: 0 auto; }
       @media only screen and (max-width: 1440px) {
         .section-form .image-form .form-inputs .group-form-input .form-control {
-          max-width: 768px;
           padding-bottom: 30px; } }
       @media only screen and (max-width: 1280px) {
         .section-form .image-form .form-inputs .group-form-input .form-control {
-          max-width: 600px;
           padding-bottom: 25px; } }
-      @media only screen and (max-width: 768px) {
-        .section-form .image-form .form-inputs .group-form-input .form-control {
-          max-width: 500px; } }
-      @media only screen and (max-width: 576px) {
-        .section-form .image-form .form-inputs .group-form-input .form-control {
-          max-width: 330px; } }
-      @media only screen and (max-width: 376px) {
-        .section-form .image-form .form-inputs .group-form-input .form-control {
-          max-width: 290px; } }
       .section-form .image-form .form-inputs .group-form-input .form-control .label-left {
         flex-basis: 20%;
         font-size: 18px;

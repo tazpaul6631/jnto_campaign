@@ -3,7 +3,7 @@
 .main {
   overflow-x: hidden;
 
-  #button {
+  #button__story {
     position: fixed;
     transition: background-color 0.3s, opacity 0.5s, visibility 0.5s;
     opacity: 0;
@@ -28,8 +28,8 @@
       right: 3px;
     }
 
-    .button-top {
-      background-color: #e70c23;
+    .button-top__story {
+      background-color: #0071bc;
       width: 50px;
       height: 50px;
       text-align: center;
@@ -48,7 +48,7 @@
 
       &:hover {
         cursor: pointer;
-        background-color: #ed586e;
+        background-color: #2f87c2;
       }
 
       // Laptop 1440
@@ -148,7 +148,7 @@
     }
   }
 
-  #button.show {
+  #button__story.show {
     opacity: 1;
     visibility: visible;
   }
@@ -194,14 +194,14 @@
       padding-top: 10px;
     }
 
-    .btn-action {
+    .btn-action__story {
       outline: none;
       padding: 3px 10px 6px;
       font-size: 26px;
       font-family: UTMAvoBold;
       border-radius: 15px;
-      background-color: #ff041d;
-      border: 1px solid #ff041d;
+      background-color: #0071bc;
+      border: 1px solid #0071bc;
       color: white;
       cursor: pointer;
       width: 400px;
@@ -210,7 +210,7 @@
       &:hover {
         border: 1px solid white;
         background-color: white;
-        color: #ff041d;
+        color: #0071bc;
         @include box-shadow(4px, 5px, 10px, rgba(0, 0, 0, 0.5));
         transition: ease-in-out 0.2s;
       }
@@ -266,7 +266,7 @@
     margin: 10px 0 10px;
   }
 
-  .group-text {
+  .group-text__story {
     position: relative;
 
     h3 {
@@ -292,7 +292,7 @@
     h4 {
       font-size: 35px;
       font-family: UTMAvoBold;
-      color: red;
+      color: #0071bc;
 
       // Laptop 1280
       @media #{$info-laptop-small} {
@@ -328,13 +328,14 @@
         // Ipad Pro
         @media #{$info-laptop-smallest} {
           margin: 13px 0;
-          font-size: 17px;
+          font-size: 18px;
           flex-basis: 100%;
           font-weight: bolder;
           border-radius: 10px;
-          background-color: rgba(243, 218, 222, 0.8);
+          background-color: rgba(0, 113, 188, 0.5);
           padding: 10px 20px;
           z-index: 1;
+          color: white;
           line-height: 30px;
         }
 
@@ -353,8 +354,8 @@
       position: absolute;
       top: -30px;
       right: 0;
-      width: 550px;
-      height: 380px;
+      width: 410px;
+      height: 400px;
       z-index: -1;
 
       // Laptop 1440
@@ -399,7 +400,7 @@
 
 /////////////////////////////////////////////////
 // Section Photo
-.section-photo {
+.section-photo__story {
   @include flex();
   align-items: center;
 
@@ -427,7 +428,7 @@
       content: "";
       border-top: 15px solid transparent;
       border-bottom: 15px solid transparent;
-      border-right: 25px solid #e70c23;
+      border-right: 25px solid #0071bc;
       position: inherit;
       margin-right: 5px;
 
@@ -435,20 +436,26 @@
       @media #{$info-laptop-medium} {
         border-top: 12px solid transparent;
         border-bottom: 12px solid transparent;
-        border-right: 22px solid #e70c23;
+        border-right: 22px solid #0071bc;
       }
 
       // Laptop 1280
       @media #{$info-laptop-small} {
         border-top: 10px solid transparent;
         border-bottom: 10px solid transparent;
-        border-right: 20px solid #e70c23;
+        border-right: 20px solid #0071bc;
       }
     }
 
     // Laptop 1440
     @media #{$info-laptop-medium} {
       left: -110px;
+    }
+
+    // Laptop 1368
+    @media #{$info-laptop-normal} {
+      height: 60px;
+      width: 60px;
     }
 
     // Laptop 1280
@@ -487,7 +494,7 @@
       content: "";
       border-top: 15px solid transparent;
       border-bottom: 15px solid transparent;
-      border-left: 25px solid #e70c23;
+      border-left: 25px solid #0071bc;
       margin-left: 5px;
       position: inherit;
 
@@ -495,20 +502,26 @@
       @media #{$info-laptop-medium} {
         border-top: 12px solid transparent;
         border-bottom: 12px solid transparent;
-        border-left: 22px solid #e70c23;
+        border-left: 22px solid #0071bc;
       }
 
       // Laptop 1280
       @media #{$info-laptop-small} {
         border-top: 10px solid transparent;
         border-bottom: 10px solid transparent;
-        border-right: 20px solid #e70c23;
+        border-left: 20px solid #0071bc;
       }
     }
 
     // Laptop 1440
     @media #{$info-laptop-medium} {
       right: -110px;
+    }
+
+    // Laptop 1368
+    @media #{$info-laptop-normal} {
+      height: 60px;
+      width: 60px;
     }
 
     // Laptop 1280
@@ -802,7 +815,7 @@
       }
 
       h4 {
-        color: #e70c23;
+        color: #0071BC;
         font-family: UTMAvoBold;
         font-size: 35px;
 
@@ -874,7 +887,7 @@
 
 /////////////////////////////////////////////////
 // Section Image + Rules + Award
-.section-rules {
+.section-rules__story {
   .image-rules {
     background-image: url("../img/group346.png");
     background-repeat: no-repeat;
@@ -932,7 +945,7 @@
         h4 {
           font-size: 30px;
           font-family: UTMAvoBold;
-          color: #e70c23;
+          color: #0071BC;
           margin-bottom: 10px;
 
           // Laptop 1280
@@ -1132,13 +1145,12 @@
 
       .prize {
         width: 100%;
-        height: 80px;
+        height: 96px;
         margin-bottom: 15px;
 
         // Laptop 1280
         @media #{$info-laptop-small} {
-          height: 70px;
-          margin-bottom: 0;
+          height: 90px;
         }
 
         // Ipad Pro
@@ -1444,10 +1456,10 @@
 }
 
 /////////////////////////////////////////////////
-// Section Image-Form
-.section-form {
+// Section Image-Form Story
+.section-form__story {
   .image-form {
-    background-image: url("../img/group499.png");
+    background-image: url("../img/group507.png");
     background-position: bottom;
     background-size: cover;
     background-repeat: no-repeat;
@@ -1473,14 +1485,14 @@
 
         // Laptop 1280
         @media #{$info-laptop-small} {
-          font-size: 30px;
+          font-size: 35px;
         }
       }
 
       h4 {
         font-size: 35px;
         font-family: UTMAvoBold;
-        color: #e70c23;
+        color: #0071BC;
         margin-bottom: 20px;
 
         // Laptop 1280
@@ -1498,14 +1510,16 @@
 
     .form-file-image {
       .title-form-file {
-        background-color: #ed586e;
+        background-color: #0071BC;
         color: white;
         font-weight: bold;
+        text-align: left;
+        margin-bottom: 20px;
 
         // Laptop 1280
         @media #{$info-laptop-small} {
           width: 80%;
-          margin: 0 auto;
+          margin: 10px auto;
         }
 
         // Phone
@@ -1535,260 +1549,21 @@
           }
         }
       }
-
-      .image-upload-wrap {
-        margin: 20px auto;
-        border: 5px dashed #ed586e;
-        border-radius: 30px;
-        position: relative;
-        height: 300px;
-        width: 98%;
-
-        &:hover {
-          background-color: rgba(237, 88, 110, 0.1);
-          border: 5px dashed #ed586e;
-        }
-
-        // Laptop 1368
-        @media #{$info-laptop-normal} {
-          border: 4px dashed #ed586e;
-          height: 260px;
-          margin: 10px auto;
-
-          &:hover {
-            background-color: rgba(237, 88, 110, 0.1);
-            border: 2.5px dashed #ed586e;
-          }
-        }
-
-        // Laptop 1280
-        @media #{$info-laptop-small} {
-          border: 3px dashed #ed586e;
-          height: 200px;
-          margin: 10px auto;
-          width: 78%;
-
-          &:hover {
-            background-color: rgba(237, 88, 110, 0.1);
-            border: 2.5px dashed #ed586e;
-          }
-        }
-
-        // Phone
-        @media #{$info-phone-normal} {
-          height: 150px;
-          width: 98%;
-          margin: 10px auto;
-
-          &:hover {
-            background-color: rgba(237, 88, 110, 0.1);
-            border: 2.5px dashed #ed586e;
-          }
-        }
-
-        .file-upload-input {
-          position: absolute;
-          margin: 0;
-          padding: 0;
-          width: 100%;
-          height: 100%;
-          outline: none;
-          opacity: 0;
-          cursor: pointer;
-        }
-
-        .drag-text {
-          text-align: center;
-          height: 100%;
-          @include flex();
-          justify-content: center;
-          align-items: center;
-          flex-direction: column;
-
-          .image-upload {
-            width: 100px;
-            height: 100px;
-            margin-bottom: 30px;
-
-            // Laptop 1280
-            @media #{$info-laptop-small} {
-              width: 70px;
-              height: 70px;
-              margin-bottom: 16px;
-            }
-
-            // Phone
-            @media #{$info-phone-normal} {
-              width: 40px;
-              height: 40px;
-              margin-bottom: 10px;
-            }
-
-            img {
-              width: 100%;
-              height: 100%;
-            }
-          }
-
-          h3 {
-            color: black;
-            margin-bottom: 22px;
-            font-size: 20px;
-            font-family: Verdana;
-            font-weight: bold;
-
-            // Laptop 1280
-            @media #{$info-laptop-small} {
-              margin-bottom: 15px;
-              font-size: 16px;
-            }
-
-            // Phone
-            @media #{$info-phone-normal} {
-              margin-bottom: 10px;
-              font-size: 12px;
-            }
-
-            .text-browse {
-              color: red;
-            }
-          }
-
-          small {
-            font-size: 18px;
-            font-family: Verdana;
-
-            // Laptop 1280
-            @media #{$info-laptop-small} {
-              font-size: 15px;
-            }
-
-            // Phone
-            @media #{$info-phone-normal} {
-              font-size: 11px;
-            }
-          }
-        }
-      }
-
-      .file-upload-content {
-        display: none;
-        text-align: center;
-        padding-top: 20px;
-
-        // Phone
-        @media #{$info-phone-normal} {
-          padding-top: 10px;
-        }
-
-        .file-upload-image {
-          max-height: 400px;
-          max-width: 400px;
-          margin: auto;
-          padding: 10px;
-          background-color: rgba(237, 88, 110, 0.2);
-
-          // Laptop 1280
-          @media #{$info-laptop-small} {
-            max-height: 300px;
-            max-width: 300px;
-            padding: 10px;
-          }
-
-          // Phone
-          @media #{$info-phone-normal} {
-            max-height: 150px;
-            max-width: 150px;
-            padding: 5px;
-          }
-        }
-
-        .image-title-wrap {
-          padding: 0 15px 15px 15px;
-          color: #222;
-          padding-top: 10px;
-
-          .remove-image {
-            width: 350px;
-            margin: 0;
-            color: #fff;
-            background: #cd4535;
-            border: none;
-            font-size: 18px;
-            padding: 10px;
-            border-radius: 5px;
-            border-bottom: 4px solid #b02818;
-            transition: all 0.2s ease;
-            outline: none;
-            text-transform: uppercase;
-            font-size: 13px;
-
-            &:hover {
-              background: #c13b2a;
-              color: #ffffff;
-              transition: all 0.2s ease;
-              cursor: pointer;
-            }
-
-            &:active {
-              border: 0;
-              transition: all 0.2s ease;
-            }
-
-            // Ipad Pro
-            @media #{$info-laptop-smallest} {
-              width: 250px;
-              font-size: 15px;
-              padding: 5px;
-            }
-
-            // Phone
-            @media #{$info-phone-normal} {
-              width: 150px;
-              font-size: 10px;
-              padding: 3px;
-            }
-
-            .image-title {
-              overflow-wrap: break-word;
-            }
-          }
-        }
-      }
-
-      .image-dropping:hover {
-        background-color: rgba(237, 88, 110, 0.1);
-        border: 6px dashed #ed586e;
-
-        // Ipad Pro
-        @media #{$info-laptop-smallest} {
-          border: 5px dashed #ed586e;
-        }
-
-        // Ipad
-        @media #{$info-ipad} {
-          border: 4px dashed #ed586e;
-        }
-
-        // Phone
-        @media #{$info-phone-normal} {
-          border: 3px dashed #ed586e;
-        }
-      }
     }
 
     .form-inputs {
       .title-form-input {
-        background-color: #ed586e;
+        background-color: #0071BC;
         color: white;
         font-weight: bold;
         margin-bottom: 25px;
+        text-align: left;
 
         // Laptop 1280
         @media #{$info-laptop-small} {
           margin-bottom: 15px;
           width: 80%;
-          margin: 0 auto;
+          margin: 10px auto;
         }
 
         // Phone
@@ -1822,11 +1597,6 @@
 
       .group-form-input {
         text-align: center;
-
-        // Laptop 1280
-        @media #{$info-laptop-small} {
-          padding-top: 10px;
-        }
 
         .form-control {
           @include flex();
@@ -1881,10 +1651,6 @@
             // Laptop 1280
             @media #{$info-laptop-small} {
               font-size: 14px;
-            }
-
-            // Ipad
-            @media #{$info-ipad} {
               flex-basis: 25%;
             }
 
@@ -1936,7 +1702,7 @@
             position: relative;
             @include flex();
             flex-direction: column;
-            flex-basis: 80%;
+            flex-basis: 100%;
 
             .label-right {
               padding: 10px;
@@ -1945,6 +1711,7 @@
               font-size: 15px;
               border: hidden;
               background-color: #fff3f7;
+              border: 1px solid #29ABE2;
 
               // Laptop 1368
               @media #{$info-laptop-normal} {
@@ -1972,6 +1739,8 @@
               padding: 10px 20px 20px 10px;
               font-size: 18px;
               align-items: normal;
+              height: 255px;
+              border: 1px solid #29ABE2;
 
               // Laptop 1368
               @media #{$info-laptop-normal} {
@@ -1981,6 +1750,7 @@
               // Laptop 1280
               @media #{$info-laptop-small} {
                 font-size: 12px;
+                height: 180px;
               }
 
               // Ipad Pro
@@ -2010,6 +1780,42 @@
                 font-size: 8px;
               }
             }
+          }
+        }
+
+        .error-mes-textarea {
+          color: red;
+          font-size: 15px;
+          font-family: Verdana;
+          position: absolute;
+          bottom: 20px;
+          left: 20%;
+          visibility: hidden;
+
+          // Laptop 1440
+          @media #{$info-laptop-medium} {
+            bottom: 10px;
+            font-size: 14px;
+          }
+
+          // Laptop 1280
+          @media #{$info-laptop-small} {
+            bottom: 10px;
+            font-size: 12px;
+            left: 0;
+          }
+
+          // Ipad
+          @media #{$info-ipad} {
+            left: 25%;
+            bottom: 10px;
+            font-size: 11px;
+          }
+
+          // Phone
+          @media #{$info-phone-normal} {
+            left: 30%;
+            font-size: 12px;
           }
         }
 
@@ -2052,12 +1858,7 @@
           .form-input {
             .label-right,
             .textarea {
-              border: 2px solid red;
-
-              // Ipad
-              @media #{$info-ipad} {
-                border: 1px solid red;
-              }
+              border: 1px solid red;
             }
           }
 
@@ -2070,12 +1871,7 @@
           .form-input {
             .label-right,
             .textarea {
-              border: 2px solid green;
-
-              // Ipad
-              @media #{$info-ipad} {
-                border: 1px solid green;
-              }
+              border: 1px solid green;
             }
           }
 
@@ -2215,7 +2011,7 @@
       font-weight: bold;
       position: relative;
       color: white;
-      background-color: rgba(237, 88, 110, 0.5);
+      background-color: rgba(0, 113, 188, 0.5);
       border: none;
       margin-bottom: 302px;
 
@@ -2278,7 +2074,7 @@
 
     .success-emtry {
       cursor: pointer;
-      background-color: #ed586e;
+      background-color: #0071BC;
       @include box-shadow(1px, 3px, 10px, rgba(0, 0, 0, 0.4));
 
       &:active {

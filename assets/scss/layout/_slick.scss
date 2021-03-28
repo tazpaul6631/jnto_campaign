@@ -1,37 +1,54 @@
 .slick-dots {
-	display: flex;
-	justify-content: center;
-	margin: 0;
-	padding: 1rem 0;
-	list-style-type: none;
+  display: flex;
+  justify-content: center;
+  margin: 0;
+  padding: 1rem 0;
+  list-style-type: none;
 
-    li {
-        margin: 1rem;
-        border-radius: 50%;
-        box-shadow: 0 5px 15px rgba(0, 0, 0, 0.4);
+  li {
+    margin: 1rem;
+    border-radius: 50%;
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.4);
+
+    // Laptop 1280
+    @media #{$info-laptop-small} {
+      margin: 0.8rem;
     }
 
-    button {
-        display: block;
-        width: 1.2rem;
-        height: 1.2rem;
-        padding: 0;
-        border: none;
-        border-radius: 100%;
-        background-color: #808080;
-        text-indent: -9999px;
-
-        &:focus {
-            outline: none;
-        }
-
-        @media #{$info-phone-normal} {
-            width: .8rem;
-        height: .8rem;
-        }
+    // Phone
+    @media #{$info-phone-normal} {
+      box-shadow: 0 3px 5px rgba(0, 0, 0, 0.4);
     }
+  }
+
+  button {
+    display: block;
+    width: 0.6rem;
+    height: 0.6rem;
+    padding: 0;
+    border: none;
+    border-radius: 100%;
+    background-color: #808080;
+    text-indent: -9999px;
+
+    &:focus {
+      outline: none;
+    }
+
+    // Laptop 1280
+    @media #{$info-laptop-small} {
+      width: 0.5rem;
+      height: 0.5rem;
+    }
+
+    // Phone
+    @media #{$info-phone-normal} {
+      width: 0.4rem;
+      height: 0.4rem;
+    }
+  }
 }
 
 .slick-active button {
-    background-color: #FFFFFF;
+  background-color: #ffffff;
 }

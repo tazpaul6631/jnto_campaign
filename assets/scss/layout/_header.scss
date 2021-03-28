@@ -7,32 +7,26 @@
 
     // Laptop 1440
     @media #{$info-laptop-medium} {
-        width: 12vw;
-        margin: 1vw 4vw;
-    }
-
-    // Laptop 1368
-    @media #{$info-laptop-normal} {
-        width: 19vw;
-        margin: 2vw 5vw;
+      width: 12vw;
+      margin: 1vw 4vw;
     }
 
     // Laptop 1280
     @media #{$info-laptop-small} {
-        width: 20vw;
-        margin: 2vw 5vw;
+      width: 10vw;
+      margin: 1vw 4vw;
     }
 
     // Ipad Pro
     @media #{$info-laptop-smallest} {
-        width: 22vw;
-        margin: 2vw 5vw;
+      width: 16vw;
+      margin: 2vw 5vw;
     }
 
     // Phone
-    @media #{$info-ipad} {
-        width: 24vw;
-        margin: 2vw 5vw;
+    @media #{$info-phone-normal} {
+      width: 20vw;
+      margin: 2vw 5vw;
     }
   }
 }

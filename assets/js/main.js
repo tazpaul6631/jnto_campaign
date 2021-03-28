@@ -23,8 +23,6 @@ $(document).ready(function () {
   // Slick Photo
   $(".photo-silder").slick({
     dots: true,
-    // prevArrow: ".btn-prev",
-    // nextArrow: ".btn-next",
     infinite: true,
     responsive: [
       {

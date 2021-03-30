@@ -25,13 +25,13 @@
 
     // Phone
     @media #{$info-phone-normal} {
-      right: 3px;
+      right: 2px;
     }
 
     .button-top__story {
       background-color: #0071bc;
-      width: 50px;
-      height: 50px;
+      width: 40px;
+      height: 40px;
       text-align: center;
       border-radius: 4px;
       display: inline-block;
@@ -42,7 +42,7 @@
         font-weight: normal;
         font-style: normal;
         font-size: 30px;
-        line-height: 47px;
+        line-height: 40px;
         color: #fff;
       }
 
@@ -62,7 +62,7 @@
         }
       }
 
-      // Laptop 1280
+      // Laptop 1368
       @media #{$info-laptop-small} {
         width: 30px;
         height: 30px;
@@ -101,7 +101,7 @@
         height: 25px;
 
         &::after {
-          font-size: 20px;
+          font-size: 18px;
           line-height: 23px;
         }
       }
@@ -111,14 +111,14 @@
       writing-mode: vertical-rl;
       text-orientation: mixed;
       margin: 0 auto;
-      margin-top: 18px;
-      font-size: 30px;
+      margin-top: 16px;
+      font-size: 27px;
       font-family: Verdana;
       cursor: pointer;
 
       // Laptop 1440
       @media #{$info-laptop-medium} {
-        margin-top: 18px;
+        margin-top: 12px;
         font-size: 25px;
       }
 
@@ -131,19 +131,19 @@
       // Ipad Pro
       @media #{$info-laptop-smallest} {
         margin-top: 12px;
-        font-size: 25px;
+        font-size: 23px;
       }
 
       // Ipad
       @media #{$info-ipad} {
         margin-top: 12px;
-        font-size: 25px;
+        font-size: 20px;
       }
 
       // Phone
       @media #{$info-phone-normal} {
-        margin-top: 10px;
-        font-size: 16px;
+        margin-top: 5px;
+        font-size: 15px;
       }
     }
   }
@@ -168,7 +168,7 @@
 
 /////////////////////////////////////////////////
 // Section Button
-.section-action {
+.section-action__story {
   .group-action {
     @include flex();
     justify-content: space-between;
@@ -194,7 +194,7 @@
       padding-top: 10px;
     }
 
-    .btn-action__story {
+    .btn-action {
       outline: none;
       padding: 3px 10px 6px;
       font-size: 26px;
@@ -247,7 +247,7 @@
 
 /////////////////////////////////////////////////
 // Section Info Area
-.section-info-area {
+.section-info-area__story {
   @include flex();
   margin: 50px 0 30px;
 
@@ -266,7 +266,7 @@
     margin: 10px 0 10px;
   }
 
-  .group-text__story {
+  .group-text {
     position: relative;
 
     h3 {
@@ -399,10 +399,131 @@
 }
 
 /////////////////////////////////////////////////
-// Section Photo
-.section-photo__story {
-  @include flex();
-  align-items: center;
+// Section Story
+.section-story {
+  position: relative;
+
+  ////////////////////////////////////////
+  // Modal
+  .modal {
+    position: absolute;
+    z-index: 10000; /* 1 */
+    top: 0;
+    left: 0;
+    visibility: hidden;
+    width: 100%;
+    height: 100%;
+
+    .modal-overlay {
+      position: fixed;
+      z-index: 10;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 100%;
+      background: hsla(0, 0%, 0%, 0.5);
+      visibility: hidden;
+      opacity: 0;
+      transition: visibility 0s linear 0.3s, opacity 0.3s;
+    }
+
+    .modal-wrapper {
+      position: absolute;
+      z-index: 9999;
+      top: 50%;
+      left: 50%;
+      width: 32em;
+      margin-left: -16em;
+      background-color: #fff;
+      box-shadow: 0 0 1.5em hsla(0, 0%, 0%, 0.35);
+      position: fixed;
+
+      @media #{$info-phone-normal} {
+        left: 0;
+        width: 100%;
+        margin: 0;
+      }
+
+      @media #{$info-phone-small} {
+        left: 0;
+        margin-left: 0;
+      }
+
+      .modal-header,
+      .modal-content {
+        padding: 1em;
+      }
+
+      .modal-header {
+        position: relative;
+        background-color: #fff;
+        box-shadow: 0 1px 2px hsla(0, 0%, 0%, 0.06);
+        border-bottom: 1px solid #e8e8e8;
+
+        .modal-close {
+          position: absolute;
+          top: 0;
+          right: 0;
+          padding: 1em;
+          color: #aaa;
+          background: none;
+          border: 0;
+          float: right;
+
+          &:hover {
+            color: #777;
+          }
+        }
+
+        .modal-heading {
+          font-size: 1.125em;
+          margin: 0;
+          -webkit-font-smoothing: antialiased;
+          -moz-osx-font-smoothing: grayscale;
+        }
+      }
+
+      .modal-body {
+        .modal-content > *:first-child {
+          margin-top: 0;
+        }
+
+        .modal-content > *:last-child {
+          margin-bottom: 0;
+        }
+
+        .modal-content {
+          .btn-close {
+            float: right;
+            margin-bottom: 20px;
+          }
+        }
+      }
+    }
+
+    .modal-transition {
+      transition: all 0.3s 0.12s;
+      transform: translateY(-50%);
+      opacity: 0;
+    }
+  }
+
+  .modal.is-visible {
+    visibility: visible;
+
+    .modal-overlay {
+      opacity: 1;
+      visibility: visible;
+      transition-delay: 0s;
+    }
+
+    .modal-transition {
+      transform: translateY(-50%);
+      opacity: 1;
+    }
+  }
+
+  //////////////////////////////
 
   .slick-prev {
     position: absolute;
@@ -536,104 +657,73 @@
     }
   }
 
-  .photo-silder {
+  .photo-slider {
     .photo-item {
       width: auto;
       outline: none;
       display: grid;
-      grid-row-gap: 20px;
-      grid-column-gap: 75px;
-      grid-template-columns: repeat(3, 28.5%);
+      grid-row-gap: 33px;
+      grid-template-columns: repeat(2, 50%);
       justify-items: center;
+
+      // Phone
+      @media #{$info-phone-normal} {
+        grid-template-columns: repeat(1, 100%);
+      }
+    }
+
+    .image-story {
+      border-radius: 10px;
+      width: 85%;
+      height: 318px;
+      position: relative;
+      @include flex();
+      justify-content: center;
 
       // Laptop 1440
       @media #{$info-laptop-medium} {
-        grid-column-gap: 94px;
+        height: 308px;
       }
 
       // Laptop 1368
       @media #{$info-laptop-normal} {
-        grid-column-gap: 86px;
+        height: 280px;
       }
 
       // Laptop 1280
       @media #{$info-laptop-small} {
-        grid-column-gap: 58px;
+        height: 248px;
       }
 
-      // Ipad Pro
+      // Laptop 1200
       @media #{$info-laptop-smallest} {
-        grid-column-gap: 30px;
-        grid-row-gap: 30px;
-        justify-content: center;
-      }
-
-      // Ipad
-      @media #{$info-ipad} {
-        grid-row-gap: 20px;
-      }
-
-      // Phone
-      @media #{$info-phone-normal} {
-        grid-column-gap: 30px;
-        grid-template-columns: repeat(2, 1fr);
-      }
-    }
-
-    .image-photo {
-      text-align: center;
-      border-radius: 10px;
-      width: 100%;
-      height: 330px;
-      @include flex();
-      flex-direction: column;
-
-      // Laptop 1440
-      @media #{$info-laptop-medium} {
-        height: 340px;
-      }
-
-      // Laptop 1280
-      @media #{$info-laptop-small} {
-        height: 260px;
+        height: 270px;
+        width: 80%;
       }
 
       // Ipad Pro
       @media #{$info-ipad-pro} {
-        height: 180px;
+        height: 223px;
+        width: 90%;
       }
 
-      // Ipad
-      @media #{$info-ipad} {
-        height: 200px;
+      // Phone
+      @media #{$info-phone-normal} {
+        height: 259px;
+        width: 100%;
+      }
+
+      // Phone Small
+      @media #{$info-phone-small} {
+        height: 231px;
       }
 
       .image {
-        height: 270px;
+        height: 100%;
         width: 100%;
-
-        // Laptop 1280
-        @media #{$info-laptop-small} {
-          height: 230px;
-        }
-
-        // Ipad Pro
-        @media #{$info-laptop-smallest} {
-          height: 220px;
-        }
-
-        // Ipad
-        @media #{$info-ipad} {
-          height: 160px;
-        }
-
-        // Phone
-        @media #{$info-phone-normal} {
-          height: 160px;
-        }
+        position: relative;
 
         img {
-          border-radius: 30px;
           cursor: pointer;
           width: 100%;
           height: 100%;
@@ -643,17 +733,47 @@
       }
 
       .info {
-        width: 100%;
-        @include flex();
-        justify-content: space-between;
-        align-items: center;
-        flex: 1;
+        width: 85%;
+        height: 65%;
+        position: absolute;
+        top: 50%;
+        transform: translateY(-45%);
+
+        // Laptop 1440
+        @media #{$info-laptop-medium} {
+          width: 80%;
+          height: 60%;
+          transform: translateY(-50%);
+        }
+
+        // Ipad
+        @media #{$info-ipad} {
+          height: 70%;
+          transform: translateY(-45%);
+        }
+
+        // Phone Small
+        @media #{$info-phone-small} {
+        }
 
         h3 {
-          font-size: 18px;
+          font-size: 20px;
           cursor: pointer;
           margin-left: 10px;
           text-align: left;
+          margin-bottom: 10px;
+
+          // Laptop 1440
+          @media #{$info-laptop-medium} {
+            font-size: 18px;
+            margin-bottom: 8px;
+          }
+
+          // Laptop 1368
+          @media #{$info-laptop-normal} {
+            font-size: 16px;
+            margin-bottom: 7px;
+          }
 
           // Laptop 1280
           @media #{$info-laptop-small} {
@@ -667,30 +787,75 @@
 
           // Ipad
           @media #{$info-ipad} {
-            font-size: 16px;
+            font-size: 15px;
           }
 
           // Phone
           @media #{$info-phone-normal} {
-            font-size: 12px;
+            font-size: 15px;
           }
         }
 
-        .btn-share {
-          margin: 0 10px;
-          width: 60px;
-          cursor: pointer;
-          border: 1px solid #ff0000;
-          border-radius: 10px;
+        p {
           font-size: 18px;
-          padding: 3px 4px;
-          background-color: #ff0000;
-          color: white;
-          outline: none;
+          margin-bottom: 15px;
+
+          // Laptop 1440
+          @media #{$info-laptop-medium} {
+            font-size: 16px;
+          }
 
           // Laptop 1368
           @media #{$info-laptop-normal} {
+            font-size: 14px;
+            margin-bottom: 10px;
+          }
+
+          // Laptop 1280
+          @media #{$info-laptop-small} {
+            margin-bottom: 5px;
+          }
+
+          // Laptop 1200
+          @media #{$info-laptop-smallest} {
+            font-size: 15px;
+          }
+
+          // Ipad
+          @media #{$info-ipad} {
+            font-size: 13px;
+          }
+
+          // Phone
+          @media #{$info-phone-normal} {
+            font-size: 14px;
+          }
+        }
+
+        .btn-more {
+          cursor: pointer;
+          border: 1px solid #dddad7;
+          border-radius: 5px;
+          font-size: 18px;
+          background-color: #dddad7;
+          color: #4d4d4d;
+          outline: none;
+          float: right;
+          font-family: CourierNew;
+          font-weight: bold;
+          font-style: italic;
+          padding: 5px 7px;
+          @include box-shadow(2px, 3px, 8px, rgba(0, 0, 0, 0.4));
+
+          // Laptop 1440
+          @media #{$info-laptop-medium} {
             font-size: 16px;
+          }
+
+          // Laptop 1368
+          @media #{$info-laptop-normal} {
+            font-size: 14px;
+            padding: 3px 5px;
           }
 
           // Laptop 1280
@@ -706,179 +871,14 @@
 
           // Ipad
           @media #{$info-ipad} {
-            padding: 2px 3px;
-            font-size: 15px;
+            padding: 1px 2px;
+            font-size: 14px;
           }
 
           // Phone
           @media #{$info-phone-normal} {
-            font-size: 12px;
+            font-size: 13px;
           }
-        }
-      }
-    }
-  }
-}
-
-/////////////////////////////////////////////////
-// Section Souvenir
-.section-souvenir {
-  padding: 20px 0;
-
-  // Laptop 1440
-  @media #{$info-laptop-medium} {
-    padding: 10px 0;
-  }
-
-  // Laptop 1280
-  @media #{$info-laptop-small} {
-    padding: 5px 0;
-  }
-
-  // Ipad Pro
-  @media #{$info-laptop-smallest} {
-  }
-
-  // Ipad
-  @media #{$info-ipad} {
-  }
-
-  // Phone
-  @media #{$info-phone-normal} {
-  }
-
-  .souvenir-img {
-    background-image: url("../img/group494.png");
-    background-repeat: no-repeat;
-    background-size: contain;
-    background-position: center;
-    position: relative;
-    height: 700px;
-
-    // Laptop 1368
-    @media #{$info-laptop-normal} {
-      height: 585px;
-    }
-
-    // Laptop 1280
-    @media #{$info-laptop-small} {
-      height: 580px;
-    }
-
-    // Ipad Pro
-    @media #{$info-laptop-smallest} {
-      height: 550px;
-    }
-
-    // Ipad
-    @media #{$info-ipad} {
-      height: 470px;
-    }
-
-    // Phone
-    @media #{$info-phone-normal} {
-      height: 245px;
-    }
-
-    .souvenir-text {
-      text-align: center;
-      position: absolute;
-      top: 50%;
-      left: 50%;
-      transform: translate(-50%, -50%);
-
-      h3 {
-        color: black;
-        font-size: 45px;
-        font-family: BrushScript;
-        font-style: italic;
-
-        // Laptop 1368
-        @media #{$info-laptop-normal} {
-          font-size: 40px;
-        }
-
-        // Laptop 1280
-        @media #{$info-laptop-small} {
-          font-size: 35px;
-        }
-
-        // Ipad
-        @media #{$info-ipad} {
-          font-size: 35px;
-        }
-
-        // Phone
-        @media #{$info-phone-normal} {
-          font-size: 16px;
-        }
-      }
-
-      h4 {
-        color: #0071BC;
-        font-family: UTMAvoBold;
-        font-size: 35px;
-
-        // Laptop 1440
-        @media #{$info-laptop-medium} {
-          font-size: 33px;
-        }
-
-        // Laptop 1368
-        @media #{$info-laptop-normal} {
-          font-size: 30px;
-        }
-
-        // Laptop 1280
-        @media #{$info-laptop-small} {
-          font-size: 27px;
-        }
-
-        // Ipad
-        @media #{$info-ipad} {
-          font-size: 22px;
-        }
-
-        // Phone
-        @media #{$info-phone-normal} {
-          font-size: 11px;
-        }
-      }
-
-      p {
-        color: black;
-        text-align: left;
-        font-size: 20px;
-        font-family: Verdana;
-        width: 80%;
-        margin: 0 auto;
-
-        // Laptop 1368
-        @media #{$info-laptop-normal} {
-          font-size: 18px;
-        }
-
-        // Laptop 1280
-        @media #{$info-laptop-small} {
-          font-size: 16px;
-        }
-
-        // Ipad Pro
-        @media #{$info-laptop-smallest} {
-          font-size: 17px;
-          width: 75%;
-        }
-
-        // Ipad
-        @media #{$info-ipad} {
-          font-size: 12px;
-          width: 85%;
-        }
-
-        // Phone
-        @media #{$info-phone-normal} {
-          font-size: 7px;
-          width: 90%;
         }
       }
     }
@@ -945,7 +945,7 @@
         h4 {
           font-size: 30px;
           font-family: UTMAvoBold;
-          color: #0071BC;
+          color: #0071bc;
           margin-bottom: 10px;
 
           // Laptop 1280
@@ -1492,7 +1492,7 @@
       h4 {
         font-size: 35px;
         font-family: UTMAvoBold;
-        color: #0071BC;
+        color: #0071bc;
         margin-bottom: 20px;
 
         // Laptop 1280
@@ -1510,21 +1510,21 @@
 
     .form-file-image {
       .title-form-file {
-        background-color: #0071BC;
+        background-color: #0071bc;
         color: white;
         font-weight: bold;
         text-align: left;
         margin-bottom: 20px;
 
-        // Laptop 1280
-        @media #{$info-laptop-small} {
-          width: 80%;
-          margin: 10px auto;
-        }
+        // // Laptop 1280
+        // @media #{$info-laptop-small} {
+        //   width: 80%;
+        //   margin: 10px auto;
+        // }
 
         // Phone
         @media #{$info-phone-normal} {
-          width: 100%;
+          margin-bottom: 10px;
         }
 
         p {
@@ -1553,7 +1553,7 @@
 
     .form-inputs {
       .title-form-input {
-        background-color: #0071BC;
+        background-color: #0071bc;
         color: white;
         font-weight: bold;
         margin-bottom: 25px;
@@ -1562,8 +1562,6 @@
         // Laptop 1280
         @media #{$info-laptop-small} {
           margin-bottom: 15px;
-          width: 80%;
-          margin: 10px auto;
         }
 
         // Phone
@@ -1605,34 +1603,19 @@
           position: relative;
           margin-bottom: 38px;
           padding-bottom: 38px;
-          max-width: 968px;
+          // max-width: 968px;
           margin: 0 auto;
 
           // Laptop 1440
           @media #{$info-laptop-medium} {
-            max-width: 768px;
+            // max-width: 768px;
             padding-bottom: 30px;
           }
 
           // Laptop 1280
           @media #{$info-laptop-small} {
-            max-width: 600px;
+            // max-width: 600px;
             padding-bottom: 25px;
-          }
-
-          // Ipad
-          @media #{$info-ipad} {
-            max-width: 500px;
-          }
-
-          // Phone
-          @media #{$info-phone-normal} {
-            max-width: 330px;
-          }
-
-          // Phone Small
-          @media #{$info-phone-small} {
-            max-width: 290px;
           }
 
           .label-left {
@@ -1711,7 +1694,7 @@
               font-size: 15px;
               border: hidden;
               background-color: #fff3f7;
-              border: 1px solid #29ABE2;
+              border: 1px solid #29abe2;
 
               // Laptop 1368
               @media #{$info-laptop-normal} {
@@ -1740,11 +1723,12 @@
               font-size: 18px;
               align-items: normal;
               height: 255px;
-              border: 1px solid #29ABE2;
+              border: 1px solid #29abe2;
 
               // Laptop 1368
               @media #{$info-laptop-normal} {
                 font-size: 16px;
+                height: 200px;
               }
 
               // Laptop 1280
@@ -1756,11 +1740,13 @@
               // Ipad Pro
               @media #{$info-laptop-smallest} {
                 padding: 5px 5px 12px;
+                height: 170px;
               }
 
               // Phone
               @media #{$info-phone-normal} {
                 font-size: 10px;
+                height: 150px;
               }
             }
 
@@ -1789,7 +1775,7 @@
           font-family: Verdana;
           position: absolute;
           bottom: 20px;
-          left: 20%;
+          left: 0;
           visibility: hidden;
 
           // Laptop 1440
@@ -1802,19 +1788,16 @@
           @media #{$info-laptop-small} {
             bottom: 10px;
             font-size: 12px;
-            left: 0;
           }
 
           // Ipad
           @media #{$info-ipad} {
-            left: 25%;
             bottom: 10px;
             font-size: 11px;
           }
 
           // Phone
           @media #{$info-phone-normal} {
-            left: 30%;
             font-size: 12px;
           }
         }
@@ -1825,7 +1808,7 @@
           font-family: Verdana;
           position: absolute;
           bottom: 20px;
-          left: 20%;
+          left: 17%;
           visibility: hidden;
 
           // Laptop 1440
@@ -1838,18 +1821,18 @@
           @media #{$info-laptop-small} {
             bottom: 10px;
             font-size: 12px;
+            left: 20%;
           }
 
           // Ipad
           @media #{$info-ipad} {
-            left: 25%;
             bottom: 10px;
             font-size: 11px;
           }
 
           // Phone
           @media #{$info-phone-normal} {
-            left: 30%;
+            left: 26%;
             font-size: 12px;
           }
         }
@@ -2074,7 +2057,7 @@
 
     .success-emtry {
       cursor: pointer;
-      background-color: #0071BC;
+      background-color: #0071bc;
       @include box-shadow(1px, 3px, 10px, rgba(0, 0, 0, 0.4));
 
       &:active {

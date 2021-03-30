@@ -63,10 +63,10 @@
     <section id="section-action" class="section-action">
       <div class="container">
         <div class="group-action">
-          <button class="btn-info btn-action">
+          <button class="btn-info btn-action" id="btn-info__photo">
             THÔNG TIN CHI TIẾT
           </button>
-          <button class="btn-register btn-action">
+          <button class="btn-register btn-action" id="btn-register__photo">
             ĐĂNG KÝ NGAY
           </button>
         </div>
@@ -83,7 +83,12 @@
           <h4>ẢNH DỰ THI</h4>
 
           <div class="test-img">
-            <p>Cơ quan Xúc tiến Du lịch Nhật Bản (JNTO) tổ chức cuộc thi ảnh và cuộc thi viết dành cho những ai đã từng đi du lịch Nhật Bản từ Việt Nam. Cuộc thi ảnh là cơ hội để chia sẻ những tấm hình lưu niệm đẹp trong chuyến đi đến Nhật Bản, còn cuộc thi viết là cơ hội chia sẻ cảm nhận của bạn về chuyến đi đó. Trong số những bức ảnh và bài viết tham gia dự thi, chúng tôi sẽ chọn ra những tác phẩm xuất sắc nhất, ấn tượng nhất để trao tặng những giải thưởng hấp dẫn. Chúng tôi sẽ đăng các thông tin cụ thể lên website, trang Facebook chính thức của JNTO. Hãy cùng theo dõi và đăng ký tham dự cuộc thi nhé!
+            <p>Cơ quan Xúc tiến Du lịch Nhật Bản (JNTO) tổ chức cuộc thi ảnh và cuộc thi viết dành cho những ai đã từng
+              đi du lịch Nhật Bản từ Việt Nam. Cuộc thi ảnh là cơ hội để chia sẻ những tấm hình lưu niệm đẹp trong
+              chuyến đi đến Nhật Bản, còn cuộc thi viết là cơ hội chia sẻ cảm nhận của bạn về chuyến đi đó. Trong số
+              những bức ảnh và bài viết tham gia dự thi, chúng tôi sẽ chọn ra những tác phẩm xuất sắc nhất, ấn tượng
+              nhất để trao tặng những giải thưởng hấp dẫn. Chúng tôi sẽ đăng các thông tin cụ thể lên website, trang
+              Facebook chính thức của JNTO. Hãy cùng theo dõi và đăng ký tham dự cuộc thi nhé!
             </p>
 
             <div class="image-tree">
@@ -97,12 +102,36 @@
 
     <!-- Section Photo -->
     <section id="section-photo" class="section-photo">
-      <div class="container">
-        <ul class="photo-silder">
 
+      <div class="modal">
+        <div class="modal-overlay modal-toggle"></div>
+        <div class="modal-wrapper modal-transition">
+          <div class="modal-header">
+            <button class="modal-close modal-toggle"><svg class="icon-close icon" viewBox="0 0 32 32">
+                <use xlink:href="#icon-close"></use>
+              </svg></button>
+            <h2 class="modal-heading">This is a modal</h2>
+          </div>
+
+          <div class="modal-body">
+            <div class="modal-img">
+              <img src="./assets/img/151023_m.jpg" alt="tog">
+            </div>
+            <div class="modal-content">
+              <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Impedit eum delectus, libero, accusantium
+                dolores inventore obcaecati placeat cum sapiente vel laboriosam similique totam id ducimus aperiam,
+                ratione fuga blanditiis maiores.</p>
+              <button class="modal-toggle btn-close">OK</button>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <div class="container">
+        <ul class="photo-slider">
           <li class="photo-item">
             <div class="image-photo">
-              <div class="image">
+              <div class="image modal-toggle">
                 <img src="./assets/img/151023_m.jpg" alt="tog">
               </div>
               <div class="info">
@@ -770,6 +799,7 @@
           </li>
 
         </ul>
+
       </div>
     </section>
 
@@ -780,7 +810,8 @@
           <div class="souvenir-text">
             <h3>Like Ảnh</h3>
             <h4>TO GET JAPANESE SOUVENIR</h4>
-            <P>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Quos iusto nihil rem incidunt dolorem, rerummagni rem incidunt doloremrem incidunt doloremrem incidunt dolorem.</P>
+            <P>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Quos iusto nihil rem incidunt dolorem,
+              rerummagni rem incidunt doloremrem incidunt doloremrem incidunt dolorem.</P>
           </div>
         </div>
       </div>
@@ -813,11 +844,13 @@
                 </li>
                 <li class="rules-table">
                   <p class="rule-left">Điều kiện tham gia</p>
-                  <span class="rule-right">Đang sinh sống ở Việt Nam..Không giới hạn trình độ, giới tính, độ tuổi hay quốc tịch.Dự thi bằng những bức ảnh tự chụp của chuyến đi Nhật Bản trong quá khứ.</span>
+                  <span class="rule-right">Đang sinh sống ở Việt Nam..Không giới hạn trình độ, giới tính, độ tuổi hay
+                    quốc tịch.Dự thi bằng những bức ảnh tự chụp của chuyến đi Nhật Bản trong quá khứ.</span>
                 </li>
                 <li class="rules-table">
                   <p class="rule-left">Phương thức đăng ký</p>
-                  <span class="rule-right">Sau khi đồng ý với các quy định của cuộc thi, bạn hãy điền đầy đủ thông tin trên website và đăng ảnh
+                  <span class="rule-right">Sau khi đồng ý với các quy định của cuộc thi, bạn hãy điền đầy đủ thông tin
+                    trên website và đăng ảnh
                     dự thi để hoàn tất đăng ký.</span>
                 </li>
               </ul>
@@ -896,44 +929,47 @@
             <h4>ĐĂNG KÝ THAM GIA</h4>
           </div>
 
-          <div class="form-file-image">
-            <div class="title-form-file">
-              <p>Đăng tải ảnh dự thi</p>
-            </div>
-
-            <div class="image-upload-wrap">
-              <input class="file-upload-input" type='file' onchange="readURL(this);"
-                accept="image/*" />
-              <div class="drag-text">
-                <div class="image-upload">
-                  <img src="./assets/img/group212.png" alt="img-upload">
-                </div>
-                <h3>Drop your image here, or <span class="text-browse">browse</span></h3>
-                <small>Supports JPG, JPEG2000, PNG</small>
-              </div>
-            </div>
-
-            <div class="file-upload-content">
-              <img class="file-upload-image" src="#" alt="your image" />
-              <div class="image-title-wrap">
-                <button type="button" onclick="removeUpload()" class="remove-image">Remove <span
-                    class="image-title">Uploaded Image</span></button>
-              </div>
-            </div>
-          </div>
-
           <div class="form-inputs">
-            <div class="title-form-input">
-              <p>Vui lòng điền đầy đủ thông tin dưới đây</p>
-            </div>
 
             <form class="group-form-input" id="group-form-input">
+
+              <div class="title-form-file">
+                <p>Đăng tải ảnh dự thi</p>
+              </div>
+
+              <div class="form-file-image">
+                <div class="image-upload-wrap">
+                    <input class="file-upload-input" id="upload-img" type='file' onchange="readURL(this);"
+                    accept="image/*" />
+                  <div class="drag-text">
+                    <div class="image-upload">
+                      <img src="./assets/img/group212.png" alt="img-upload">
+                    </div>
+                    <h3>Drop your image here, or <span class="text-browse">browse</span></h3>
+                    <p>Supports JPG, JPEG2000, PNG</p>
+                    <small id="error-upload"></small>
+                  </div>
+                  
+                </div>
+                
+                <div class="file-upload-content">
+                  <img class="file-upload-image" src="#" alt="your image" />
+                  <div class="image-title-wrap">
+                    <button type="button" onclick="removeUpload()" class="remove-image">Remove <span
+                        class="image-title">Uploaded Image</span></button>
+                  </div>
+                </div>
+              </div>
+
+              <div class="title-form-input">
+                <p>Vui lòng điền đầy đủ thông tin dưới đây</p>
+              </div>
+
               <div class="form-control">
                 <label class="label-left" for="">Họ Tên <span class="error-lable">*</span></label>
 
                 <div class="form-input">
                   <input class="label-right" type="text" id="name" placeholder="Tên">
-
                 </div>
                 <small class="error-mes"></small>
               </div>

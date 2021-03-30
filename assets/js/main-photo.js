@@ -21,7 +21,7 @@ $(document).ready(function () {
 
   ////////////////////////////////////////////
   // Slick Photo
-  $(".photo-silder").slick({
+  $(".photo-slider").slick({
     dots: true,
     infinite: true,
     responsive: [
@@ -59,6 +59,7 @@ $(document).ready(function () {
   let phone = document.getElementById("phone");
   let email = document.getElementById("email");
   let desc = document.getElementById("desc");
+  let upload = document.getElementById("upload-img");
 
   form.addEventListener("submit", (e) => {
     e.preventDefault();
@@ -72,6 +73,11 @@ $(document).ready(function () {
     const phoneValue = phone.value;
     const emailValue = email.value.trim();
     const descValue = desc.value.trim();
+    const uploadValue = upload.value;
+
+    if( uploadValue === "") {
+      setErrorUpload(upload, "* Picture không được để trống!");
+    }
 
     if (nameValue === "") {
       setErrorFor(name, "* Name không được để trống!");
@@ -122,6 +128,14 @@ $(document).ready(function () {
     formControl.className = "form-control success";
   }
 
+  function setErrorUpload(input, message) {
+    const formControl = input.parentElement;
+    const small = formControl.querySelector("#error-upload");
+    small.innerText = message;
+    small.style.visibility = 'visible';
+    document.getElementsByClassName('image-upload-wrap')[0].style.border = "2px solid red";
+  }
+
   function validateNumber(phone) {
     return /^\+?([0-9]{2})\)?[-. ]?([0-9]{4})[-. ]?([0-9]{4})$/.test(phone);
   }
@@ -153,7 +167,10 @@ $(document).ready(function () {
   });
 });
 
+/////////////////////////////////////////////////
+// First disabled button
 document.getElementById("btnSubmit").disabled = true;
+
 ////////////////////////////////////
 //Validate Check (term & condition)
 function goFurther() {
@@ -173,7 +190,9 @@ function goFurther() {
 // File upload img
 function readURL(input) {
   var selectedFile = input.files[0];
+  console.log('sd', selectedFile);
   var idxDot = selectedFile.name.lastIndexOf(".") + 1;
+
   var extFile = selectedFile.name
     .substr(idxDot, selectedFile.name.length)
     .toLowerCase();
@@ -200,6 +219,8 @@ function readURL(input) {
   }
 }
 
+////////////////////////////////////////////
+// Remove img upload
 function removeUpload() {
   $(".file-upload-input").replaceWith($(".file-upload-input").clone());
   $(".file-upload-content").hide();
@@ -210,4 +231,25 @@ $(".image-upload-wrap").bind("dragover", function () {
 });
 $(".image-upload-wrap").bind("dragleave", function () {
   $(".image-upload-wrap").removeClass("image-dropping");
+});
+
+//////////////////////////
+// Modal
+$('.modal-toggle').on('click', function(e) {
+  e.preventDefault();
+  $('.modal').toggleClass('is-visible');
+});
+
+/////////////////////////////////////////////
+// Scroll to page
+$('#btn-register__photo').click(function() {
+  $('html,body').animate({
+      scrollTop: $('#section-form').offset().top},
+      'slow');
+});
+
+$('#btn-info__photo').click(function() {
+  $('html,body').animate({
+      scrollTop: $('#section-rules').offset().top},
+      'slow');
 });

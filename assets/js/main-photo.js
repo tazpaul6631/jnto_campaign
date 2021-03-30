@@ -75,7 +75,7 @@ $(document).ready(function () {
     const descValue = desc.value.trim();
     const uploadValue = upload.value;
 
-    if( uploadValue === "") {
+    if (uploadValue === "") {
       setErrorUpload(upload, "* Picture không được để trống!");
     }
 
@@ -132,8 +132,9 @@ $(document).ready(function () {
     const formControl = input.parentElement;
     const small = formControl.querySelector("#error-upload");
     small.innerText = message;
-    small.style.visibility = 'visible';
-    document.getElementsByClassName('image-upload-wrap')[0].style.border = "2px solid red";
+    small.style.visibility = "visible";
+    document.getElementsByClassName("image-upload-wrap")[0].style.border =
+      "2px solid red";
   }
 
   function validateNumber(phone) {
@@ -144,6 +145,33 @@ $(document).ready(function () {
     const re = /^(([^<>()[\]\\.,;:\s@"]+(\.[^<>()[\]\\.,;:\s@"]+)*)|(".+"))@((\[[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\])|(([a-zA-Z\-0-9]+\.)+[a-zA-Z]{2,}))$/;
     return re.test(String(email).toLowerCase());
   }
+
+  //////////////////////////
+  // Modal
+  $(".modal-toggle").on("click", function (e) {
+    e.preventDefault();
+    $(".modal").toggleClass("is-visible");
+  });
+
+  /////////////////////////////////////////////
+  // Scroll to page
+  $("#btn-register__photo").click(function () {
+    $("html,body").animate(
+      {
+        scrollTop: $("#section-form").offset().top,
+      },
+      1000
+    );
+  });
+
+  $("#btn-info__photo").click(function () {
+    $("html,body").animate(
+      {
+        scrollTop: $("#section-rules").offset().top,
+      },
+      1000
+    );
+  });
 
   ////////////////////////////////////
   // Back To Top (Photo)
@@ -163,7 +191,7 @@ $(document).ready(function () {
 
   btn.on("click", function (e) {
     e.preventDefault();
-    $("html, body").animate({ scrollTop: 0 }, sum);
+    $("html, body").animate({ scrollTop: 0 }, 1500);
   });
 });
 
@@ -190,7 +218,6 @@ function goFurther() {
 // File upload img
 function readURL(input) {
   var selectedFile = input.files[0];
-  console.log('sd', selectedFile);
   var idxDot = selectedFile.name.lastIndexOf(".") + 1;
 
   var extFile = selectedFile.name
@@ -231,25 +258,4 @@ $(".image-upload-wrap").bind("dragover", function () {
 });
 $(".image-upload-wrap").bind("dragleave", function () {
   $(".image-upload-wrap").removeClass("image-dropping");
-});
-
-//////////////////////////
-// Modal
-$('.modal-toggle').on('click', function(e) {
-  e.preventDefault();
-  $('.modal').toggleClass('is-visible');
-});
-
-/////////////////////////////////////////////
-// Scroll to page
-$('#btn-register__photo').click(function() {
-  $('html,body').animate({
-      scrollTop: $('#section-form').offset().top},
-      'slow');
-});
-
-$('#btn-info__photo').click(function() {
-  $('html,body').animate({
-      scrollTop: $('#section-rules').offset().top},
-      'slow');
 });

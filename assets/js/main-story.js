@@ -21,7 +21,7 @@ $(document).ready(function () {
 
   ////////////////////////////////////////////
   // Slick Photo
-  $(".photo-silder").slick({
+  $(".photo-slider").slick({
     dots: true,
     infinite: true,
     responsive: [
@@ -149,7 +149,34 @@ $(document).ready(function () {
 
   btn.on("click", function (e) {
     e.preventDefault();
-    $("html, body").animate({ scrollTop: 0 }, sum);
+    $("html, body").animate({ scrollTop: 0 }, 1500);
+  });
+
+  //////////////////////////
+  // Modal
+  $(".modal-toggle").on("click", function (e) {
+    e.preventDefault();
+    $(".modal").toggleClass("is-visible");
+  });
+
+  ///////////////////////////
+  // Scroll to page
+  $("#btn-register__story").click(function () {
+    $("html,body").animate(
+      {
+        scrollTop: $("#section-form__story").offset().top,
+      },
+      1000
+    );
+  });
+
+  $("#btn-info__story").click(function () {
+    $("html,body").animate(
+      {
+        scrollTop: $("#section-rules__story").offset().top,
+      },
+      1000
+    );
   });
 });
 
@@ -210,26 +237,4 @@ $(".image-upload-wrap").bind("dragover", function () {
 });
 $(".image-upload-wrap").bind("dragleave", function () {
   $(".image-upload-wrap").removeClass("image-dropping");
-});
-
-
-//////////////////////////
-// Modal
-$('.modal-toggle').on('click', function(e) {
-  e.preventDefault();
-  $('.modal').toggleClass('is-visible');
-});
-
-///////////////////////////
-// Scroll to page
-$('#btn-register__story').click(function() {
-  $('html,body').animate({
-      scrollTop: $('#section-form__story').offset().top},
-      'slow');
-});
-
-$('#btn-info__story').click(function() {
-  $('html,body').animate({
-      scrollTop: $('#section-rules__story').offset().top},
-      'slow');
 });

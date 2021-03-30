@@ -43,7 +43,6 @@
       <div class="button-top__story"></div>
       <p>Đầu Trang</p>
     </div>
-    <!-- <a id="button"></a> -->
 
     <!-- Section Banner -->
     <section id="section-banner" class="section-banner">
@@ -60,13 +59,13 @@
     </section>
 
     <!-- Section Button Action -->
-    <section id="section-action" class="section-action">
+    <section id="section-action__story" class="section-action__story">
       <div class="container">
         <div class="group-action">
-          <button class="btn-info btn-action__story">
+          <button class="btn-info btn-action" id="btn-info__story">
             THÔNG TIN CHI TIẾT
           </button>
-          <button class="btn-register btn-action__story">
+          <button class="btn-register btn-action" id="btn-register__story">
             ĐĂNG KÝ NGAY
           </button>
         </div>
@@ -74,10 +73,10 @@
     </section>
 
     <!-- Section Info Area -->
-    <section id="section-info-area" class="section-info-area">
+    <section id="section-info-area__story" class="section-info-area__story">
 
       <div class="container">
-        <div class="group-text__story">
+        <div class="group-text">
           <h3>Khu vực</h3>
 
           <h4>ẢNH DỰ THI</h4>
@@ -101,680 +100,675 @@
 
     </section>
 
-    <!-- Section Photo -->
-    <section id="section-photo__story" class="section-photo__story">
+    <!-- Section Story -->
+    <section id="section-story" class="section-story">
+
+      <div class="modal">
+        <div class="modal-overlay modal-toggle"></div>
+        <div class="modal-wrapper modal-transition">
+          <div class="modal-header">
+            <button class="modal-close modal-toggle"><svg class="icon-close icon" viewBox="0 0 32 32">
+                <use xlink:href="#icon-close"></use>
+              </svg></button>
+            <h2 class="modal-heading">This is a modal</h2>
+          </div>
+
+          <div class="modal-body">
+            <div class="modal-content">
+              <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Impedit eum delectus, libero, accusantium
+                dolores inventore obcaecati placeat cum sapiente vel laboriosam similique totam id ducimus aperiam,
+                ratione fuga blanditiis maiores.</p>
+              <button class="modal-toggle btn-close">OK</button>
+            </div>
+          </div>
+        </div>
+      </div>
+
       <div class="container">
-        <ul class="photo-silder">
-
+        <ul class="photo-slider">
           <li class="photo-item">
-            <div class="image-photo">
+            <div class="image-story">
               <div class="image">
-                <img src="./assets/img/151023_m.jpg" alt="tog">
+                <img src="./assets/img/group150.png" alt="animal">
               </div>
               <div class="info">
-                <h3>Nguyễn Thảo</h3>
-                <button class="btn-share">
-                  Share
+                <h3>Nguyễn Ngọc Thảo</h3>
+                <p>Lorem ipsum dolor, sit amet consectetur adipisicing elit. Quod, inventore aut nesciunt alias
+                  perspiciatis nulla totam eum ipsam neque magnam quis. Tempore beatae labore qui nostrum blanditiis,
+                  asperiores itaque culpa!</p>
+                <button class="btn-more modal-toggle">
+                  More
                 </button>
               </div>
             </div>
 
-            <div class="image-photo">
+            <div class="image-story">
               <div class="image">
-                <img src="./assets/img/233685_m.jpg" alt="tree">
+                <img src="./assets/img/group151.png" alt="woman">
               </div>
               <div class="info">
                 <h3>Nguyễn Ngọc Thảo</h3>
-                <button class="btn-share">
-                  Share
+                <p>Lorem ipsum dolor, sit amet consectetur adipisicing elit. Quod, inventore aut nesciunt alias
+                  perspiciatis nulla totam eum ipsam neque magnam quis. Tempore beatae labore qui nostrum blanditiis,
+                  asperiores itaque culpa!</p>
+                <button class="btn-more modal-toggle">
+                  More
                 </button>
               </div>
             </div>
 
-            <div class="image-photo">
+            <div class="image-story">
               <div class="image">
-                <img src="./assets/img/1617788_m.jpg" alt="magic">
+                <img src="./assets/img/group151.png" alt="animal">
               </div>
               <div class="info">
                 <h3>Nguyễn Ngọc Thảo</h3>
-                <button class="btn-share">
-                  Share
+                <p>Lorem ipsum dolor, sit amet consectetur adipisicing elit. Quod, inventore aut nesciunt alias
+                  perspiciatis nulla totam eum ipsam neque magnam quis. Tempore beatae labore qui nostrum blanditiis,
+                  asperiores itaque culpa!</p>
+                <button class="btn-more modal-toggle">
+                  More
                 </button>
               </div>
             </div>
 
-            <div class="image-photo">
+            <div class="image-story">
               <div class="image">
-                <img src="./assets/img/AdobeStock_226817842_Preview.jpeg" alt="animal">
+                <img src="./assets/img/group150.png" alt="woman">
               </div>
               <div class="info">
                 <h3>Nguyễn Ngọc Thảo</h3>
-                <button class="btn-share">
-                  Share
+                <p>Lorem ipsum dolor, sit amet consectetur adipisicing elit. Quod, inventore aut nesciunt alias
+                  perspiciatis nulla totam eum ipsam neque magnam quis. Tempore beatae labore qui nostrum blanditiis,
+                  asperiores itaque culpa!</p>
+                <button class="btn-more modal-toggle">
+                  More
                 </button>
               </div>
             </div>
 
-            <div class="image-photo">
+            <div class="image-story">
               <div class="image">
-                <img src="./assets/img/AdobeStock_283983927_Preview.jpeg" alt="woman">
+                <img src="./assets/img/group150.png" alt="animal">
               </div>
               <div class="info">
                 <h3>Nguyễn Ngọc Thảo</h3>
-                <button class="btn-share">
-                  Share
+                <p>Lorem ipsum dolor, sit amet consectetur adipisicing elit. Quod, inventore aut nesciunt alias
+                  perspiciatis nulla totam eum ipsam neque magnam quis. Tempore beatae labore qui nostrum blanditiis,
+                  asperiores itaque culpa!</p>
+                <button class="btn-more modal-toggle">
+                  More
                 </button>
               </div>
             </div>
 
-            <div class="image-photo">
+            <div class="image-story">
               <div class="image">
-                <img src="./assets/img/pixta_1466420_M.jpg" alt="house">
+                <img src="./assets/img/group151.png" alt="woman">
               </div>
               <div class="info">
                 <h3>Nguyễn Ngọc Thảo</h3>
-                <button class="btn-share">
-                  Share
-                </button>
-              </div>
-            </div>
-
-            <div class="image-photo">
-              <div class="image">
-                <img src="./assets/img/AdobeStock_126724528_Preview.jpeg" alt="bagoda">
-              </div>
-              <div class="info">
-                <h3>Nguyễn Ngọc Thảo</h3>
-                <button class="btn-share">
-                  Share
-                </button>
-              </div>
-            </div>
-
-            <div class="image-photo">
-              <div class="image">
-                <img src="./assets/img/pixta_72090055_M.jpg" alt="house">
-              </div>
-              <div class="info">
-                <h3>Nguyễn Ngọc Thảo</h3>
-                <button class="btn-share">
-                  Share
-                </button>
-              </div>
-            </div>
-
-            <div class="image-photo">
-              <div class="image">
-                <img src="./assets/img/umeda_sky_build.jpg" alt="">
-              </div>
-              <div class="info">
-                <h3>Nguyễn Ngọc Thảo</h3>
-                <button class="btn-share">
-                  Share
+                <p>Lorem ipsum dolor, sit amet consectetur adipisicing elit. Quod, inventore aut nesciunt alias
+                  perspiciatis nulla totam eum ipsam neque magnam quis. Tempore beatae labore qui nostrum blanditiis,
+                  asperiores itaque culpa!</p>
+                <button class="btn-more modal-toggle">
+                  More
                 </button>
               </div>
             </div>
           </li>
 
           <li class="photo-item">
-
-            <div class="image-photo">
+            <div class="image-story">
               <div class="image">
-                <img src="./assets/img/AdobeStock_226817842_Preview.jpeg" alt="animal">
+                <img src="./assets/img/group150.png" alt="animal">
               </div>
               <div class="info">
                 <h3>Nguyễn Ngọc Thảo</h3>
-                <button class="btn-share">
-                  Share
+                <p>Lorem ipsum dolor, sit amet consectetur adipisicing elit. Quod, inventore aut nesciunt alias
+                  perspiciatis nulla totam eum ipsam neque magnam quis. Tempore beatae labore qui nostrum blanditiis,
+                  asperiores itaque culpa!</p>
+                <button class="btn-more modal-toggle">
+                  More
                 </button>
               </div>
             </div>
 
-            <div class="image-photo">
+            <div class="image-story">
               <div class="image">
-                <img src="./assets/img/pixta_72090055_M.jpg" alt="house">
+                <img src="./assets/img/group151.png" alt="woman">
               </div>
               <div class="info">
                 <h3>Nguyễn Ngọc Thảo</h3>
-                <button class="btn-share">
-                  Share
+                <p>Lorem ipsum dolor, sit amet consectetur adipisicing elit. Quod, inventore aut nesciunt alias
+                  perspiciatis nulla totam eum ipsam neque magnam quis. Tempore beatae labore qui nostrum blanditiis,
+                  asperiores itaque culpa!</p>
+                <button class="btn-more modal-toggle">
+                  More
                 </button>
               </div>
             </div>
 
-            <div class="image-photo">
+            <div class="image-story">
               <div class="image">
-                <img src="./assets/img/umeda_sky_build.jpg" alt="">
+                <img src="./assets/img/group151.png" alt="animal">
               </div>
               <div class="info">
                 <h3>Nguyễn Ngọc Thảo</h3>
-                <button class="btn-share">
-                  Share
+                <p>Lorem ipsum dolor, sit amet consectetur adipisicing elit. Quod, inventore aut nesciunt alias
+                  perspiciatis nulla totam eum ipsam neque magnam quis. Tempore beatae labore qui nostrum blanditiis,
+                  asperiores itaque culpa!</p>
+                <button class="btn-more modal-toggle">
+                  More
                 </button>
               </div>
             </div>
 
-            <div class="image-photo">
+            <div class="image-story">
               <div class="image">
-                <img src="./assets/img/AdobeStock_283983927_Preview.jpeg" alt="woman">
+                <img src="./assets/img/group150.png" alt="woman">
               </div>
               <div class="info">
                 <h3>Nguyễn Ngọc Thảo</h3>
-                <button class="btn-share">
-                  Share
+                <p>Lorem ipsum dolor, sit amet consectetur adipisicing elit. Quod, inventore aut nesciunt alias
+                  perspiciatis nulla totam eum ipsam neque magnam quis. Tempore beatae labore qui nostrum blanditiis,
+                  asperiores itaque culpa!</p>
+                <button class="btn-more modal-toggle">
+                  More
                 </button>
               </div>
             </div>
 
-            <div class="image-photo">
+            <div class="image-story">
               <div class="image">
-                <img src="./assets/img/pixta_1466420_M.jpg" alt="house">
+                <img src="./assets/img/group150.png" alt="animal">
               </div>
               <div class="info">
                 <h3>Nguyễn Ngọc Thảo</h3>
-                <button class="btn-share">
-                  Share
+                <p>Lorem ipsum dolor, sit amet consectetur adipisicing elit. Quod, inventore aut nesciunt alias
+                  perspiciatis nulla totam eum ipsam neque magnam quis. Tempore beatae labore qui nostrum blanditiis,
+                  asperiores itaque culpa!</p>
+                <button class="btn-more modal-toggle">
+                  More
                 </button>
               </div>
             </div>
 
-            <div class="image-photo">
+            <div class="image-story">
               <div class="image">
-                <img src="./assets/img/AdobeStock_126724528_Preview.jpeg" alt="bagoda">
+                <img src="./assets/img/group151.png" alt="woman">
               </div>
               <div class="info">
                 <h3>Nguyễn Ngọc Thảo</h3>
-                <button class="btn-share">
-                  Share
-                </button>
-              </div>
-            </div>
-
-            <div class="image-photo">
-              <div class="image">
-                <img src="./assets/img/151023_m.jpg" alt="tog">
-              </div>
-              <div class="info">
-                <h3>Nguyễn Thảo</h3>
-                <button class="btn-share">
-                  Share
-                </button>
-              </div>
-            </div>
-
-            <div class="image-photo">
-              <div class="image">
-                <img src="./assets/img/233685_m.jpg" alt="tree">
-              </div>
-              <div class="info">
-                <h3>Nguyễn Ngọc Thảo</h3>
-                <button class="btn-share">
-                  Share
-                </button>
-              </div>
-            </div>
-
-            <div class="image-photo">
-              <div class="image">
-                <img src="./assets/img/1617788_m.jpg" alt="magic">
-              </div>
-              <div class="info">
-                <h3>Nguyễn Ngọc Thảo</h3>
-                <button class="btn-share">
-                  Share
+                <p>Lorem ipsum dolor, sit amet consectetur adipisicing elit. Quod, inventore aut nesciunt alias
+                  perspiciatis nulla totam eum ipsam neque magnam quis. Tempore beatae labore qui nostrum blanditiis,
+                  asperiores itaque culpa!</p>
+                <button class="btn-more modal-toggle">
+                  More
                 </button>
               </div>
             </div>
           </li>
 
           <li class="photo-item">
-
-            <div class="image-photo">
+            <div class="image-story">
               <div class="image">
-                <img src="./assets/img/pixta_1466420_M.jpg" alt="house">
+                <img src="./assets/img/group150.png" alt="animal">
               </div>
               <div class="info">
                 <h3>Nguyễn Ngọc Thảo</h3>
-                <button class="btn-share">
-                  Share
+                <p>Lorem ipsum dolor, sit amet consectetur adipisicing elit. Quod, inventore aut nesciunt alias
+                  perspiciatis nulla totam eum ipsam neque magnam quis. Tempore beatae labore qui nostrum blanditiis,
+                  asperiores itaque culpa!</p>
+                <button class="btn-more modal-toggle">
+                  More
                 </button>
               </div>
             </div>
 
-            <div class="image-photo">
+            <div class="image-story">
               <div class="image">
-                <img src="./assets/img/AdobeStock_126724528_Preview.jpeg" alt="bagoda">
+                <img src="./assets/img/group151.png" alt="woman">
               </div>
               <div class="info">
                 <h3>Nguyễn Ngọc Thảo</h3>
-                <button class="btn-share">
-                  Share
+                <p>Lorem ipsum dolor, sit amet consectetur adipisicing elit. Quod, inventore aut nesciunt alias
+                  perspiciatis nulla totam eum ipsam neque magnam quis. Tempore beatae labore qui nostrum blanditiis,
+                  asperiores itaque culpa!</p>
+                <button class="btn-more modal-toggle">
+                  More
                 </button>
               </div>
             </div>
 
-            <div class="image-photo">
+            <div class="image-story">
               <div class="image">
-                <img src="./assets/img/151023_m.jpg" alt="tog">
-              </div>
-              <div class="info">
-                <h3>Nguyễn Thảo</h3>
-                <button class="btn-share">
-                  Share
-                </button>
-              </div>
-            </div>
-
-            <div class="image-photo">
-              <div class="image">
-                <img src="./assets/img/233685_m.jpg" alt="tree">
+                <img src="./assets/img/group151.png" alt="animal">
               </div>
               <div class="info">
                 <h3>Nguyễn Ngọc Thảo</h3>
-                <button class="btn-share">
-                  Share
+                <p>Lorem ipsum dolor, sit amet consectetur adipisicing elit. Quod, inventore aut nesciunt alias
+                  perspiciatis nulla totam eum ipsam neque magnam quis. Tempore beatae labore qui nostrum blanditiis,
+                  asperiores itaque culpa!</p>
+                <button class="btn-more modal-toggle">
+                  More
                 </button>
               </div>
             </div>
 
-            <div class="image-photo">
+            <div class="image-story">
               <div class="image">
-                <img src="./assets/img/1617788_m.jpg" alt="magic">
+                <img src="./assets/img/group150.png" alt="woman">
               </div>
               <div class="info">
                 <h3>Nguyễn Ngọc Thảo</h3>
-                <button class="btn-share">
-                  Share
+                <p>Lorem ipsum dolor, sit amet consectetur adipisicing elit. Quod, inventore aut nesciunt alias
+                  perspiciatis nulla totam eum ipsam neque magnam quis. Tempore beatae labore qui nostrum blanditiis,
+                  asperiores itaque culpa!</p>
+                <button class="btn-more modal-toggle">
+                  More
                 </button>
               </div>
             </div>
 
-            <div class="image-photo">
+            <div class="image-story">
               <div class="image">
-                <img src="./assets/img/AdobeStock_226817842_Preview.jpeg" alt="animal">
+                <img src="./assets/img/group150.png" alt="animal">
               </div>
               <div class="info">
                 <h3>Nguyễn Ngọc Thảo</h3>
-                <button class="btn-share">
-                  Share
+                <p>Lorem ipsum dolor, sit amet consectetur adipisicing elit. Quod, inventore aut nesciunt alias
+                  perspiciatis nulla totam eum ipsam neque magnam quis. Tempore beatae labore qui nostrum blanditiis,
+                  asperiores itaque culpa!</p>
+                <button class="btn-more modal-toggle">
+                  More
                 </button>
               </div>
             </div>
 
-            <div class="image-photo">
+            <div class="image-story">
               <div class="image">
-                <img src="./assets/img/pixta_72090055_M.jpg" alt="house">
+                <img src="./assets/img/group151.png" alt="woman">
               </div>
               <div class="info">
                 <h3>Nguyễn Ngọc Thảo</h3>
-                <button class="btn-share">
-                  Share
+                <p>Lorem ipsum dolor, sit amet consectetur adipisicing elit. Quod, inventore aut nesciunt alias
+                  perspiciatis nulla totam eum ipsam neque magnam quis. Tempore beatae labore qui nostrum blanditiis,
+                  asperiores itaque culpa!</p>
+                <button class="btn-more modal-toggle">
+                  More
                 </button>
               </div>
             </div>
-
-            <div class="image-photo">
-              <div class="image">
-                <img src="./assets/img/umeda_sky_build.jpg" alt="">
-              </div>
-              <div class="info">
-                <h3>Nguyễn Ngọc Thảo</h3>
-                <button class="btn-share">
-                  Share
-                </button>
-              </div>
-            </div>
-
-            <div class="image-photo">
-              <div class="image">
-                <img src="./assets/img/AdobeStock_283983927_Preview.jpeg" alt="woman">
-              </div>
-              <div class="info">
-                <h3>Nguyễn Ngọc Thảo</h3>
-                <button class="btn-share">
-                  Share
-                </button>
-              </div>
-            </div>
-
           </li>
 
           <li class="photo-item">
-
-            <div class="image-photo">
+            <div class="image-story">
               <div class="image">
-                <img src="./assets/img/umeda_sky_build.jpg" alt="">
+                <img src="./assets/img/group150.png" alt="animal">
               </div>
               <div class="info">
                 <h3>Nguyễn Ngọc Thảo</h3>
-                <button class="btn-share">
-                  Share
+                <p>Lorem ipsum dolor, sit amet consectetur adipisicing elit. Quod, inventore aut nesciunt alias
+                  perspiciatis nulla totam eum ipsam neque magnam quis. Tempore beatae labore qui nostrum blanditiis,
+                  asperiores itaque culpa!</p>
+                <button class="btn-more modal-toggle">
+                  More
                 </button>
               </div>
             </div>
 
-            <div class="image-photo">
+            <div class="image-story">
               <div class="image">
-                <img src="./assets/img/AdobeStock_283983927_Preview.jpeg" alt="woman">
+                <img src="./assets/img/group151.png" alt="woman">
               </div>
               <div class="info">
                 <h3>Nguyễn Ngọc Thảo</h3>
-                <button class="btn-share">
-                  Share
+                <p>Lorem ipsum dolor, sit amet consectetur adipisicing elit. Quod, inventore aut nesciunt alias
+                  perspiciatis nulla totam eum ipsam neque magnam quis. Tempore beatae labore qui nostrum blanditiis,
+                  asperiores itaque culpa!</p>
+                <button class="btn-more modal-toggle">
+                  More
                 </button>
               </div>
             </div>
 
-            <div class="image-photo">
+            <div class="image-story">
               <div class="image">
-                <img src="./assets/img/151023_m.jpg" alt="tog">
-              </div>
-              <div class="info">
-                <h3>Nguyễn Thảo</h3>
-                <button class="btn-share">
-                  Share
-                </button>
-              </div>
-            </div>
-
-            <div class="image-photo">
-              <div class="image">
-                <img src="./assets/img/233685_m.jpg" alt="tree">
+                <img src="./assets/img/group151.png" alt="animal">
               </div>
               <div class="info">
                 <h3>Nguyễn Ngọc Thảo</h3>
-                <button class="btn-share">
-                  Share
+                <p>Lorem ipsum dolor, sit amet consectetur adipisicing elit. Quod, inventore aut nesciunt alias
+                  perspiciatis nulla totam eum ipsam neque magnam quis. Tempore beatae labore qui nostrum blanditiis,
+                  asperiores itaque culpa!</p>
+                <button class="btn-more modal-toggle">
+                  More
                 </button>
               </div>
             </div>
 
-            <div class="image-photo">
+            <div class="image-story">
               <div class="image">
-                <img src="./assets/img/1617788_m.jpg" alt="magic">
+                <img src="./assets/img/group150.png" alt="woman">
               </div>
               <div class="info">
                 <h3>Nguyễn Ngọc Thảo</h3>
-                <button class="btn-share">
-                  Share
+                <p>Lorem ipsum dolor, sit amet consectetur adipisicing elit. Quod, inventore aut nesciunt alias
+                  perspiciatis nulla totam eum ipsam neque magnam quis. Tempore beatae labore qui nostrum blanditiis,
+                  asperiores itaque culpa!</p>
+                <button class="btn-more modal-toggle">
+                  More
                 </button>
               </div>
             </div>
 
-            <div class="image-photo">
+            <div class="image-story">
               <div class="image">
-                <img src="./assets/img/AdobeStock_226817842_Preview.jpeg" alt="animal">
+                <img src="./assets/img/group150.png" alt="animal">
               </div>
               <div class="info">
                 <h3>Nguyễn Ngọc Thảo</h3>
-                <button class="btn-share">
-                  Share
+                <p>Lorem ipsum dolor, sit amet consectetur adipisicing elit. Quod, inventore aut nesciunt alias
+                  perspiciatis nulla totam eum ipsam neque magnam quis. Tempore beatae labore qui nostrum blanditiis,
+                  asperiores itaque culpa!</p>
+                <button class="btn-more modal-toggle">
+                  More
                 </button>
               </div>
             </div>
 
-            <div class="image-photo">
+            <div class="image-story">
               <div class="image">
-                <img src="./assets/img/pixta_1466420_M.jpg" alt="house">
+                <img src="./assets/img/group151.png" alt="woman">
               </div>
               <div class="info">
                 <h3>Nguyễn Ngọc Thảo</h3>
-                <button class="btn-share">
-                  Share
+                <p>Lorem ipsum dolor, sit amet consectetur adipisicing elit. Quod, inventore aut nesciunt alias
+                  perspiciatis nulla totam eum ipsam neque magnam quis. Tempore beatae labore qui nostrum blanditiis,
+                  asperiores itaque culpa!</p>
+                <button class="btn-more modal-toggle">
+                  More
                 </button>
               </div>
             </div>
-
-            <div class="image-photo">
-              <div class="image">
-                <img src="./assets/img/AdobeStock_126724528_Preview.jpeg" alt="bagoda">
-              </div>
-              <div class="info">
-                <h3>Nguyễn Ngọc Thảo</h3>
-                <button class="btn-share">
-                  Share
-                </button>
-              </div>
-            </div>
-
-            <div class="image-photo">
-              <div class="image">
-                <img src="./assets/img/pixta_72090055_M.jpg" alt="house">
-              </div>
-              <div class="info">
-                <h3>Nguyễn Ngọc Thảo</h3>
-                <button class="btn-share">
-                  Share
-                </button>
-              </div>
-            </div>
-
           </li>
 
           <li class="photo-item">
-
-            <div class="image-photo">
+            <div class="image-story">
               <div class="image">
-                <img src="./assets/img/AdobeStock_226817842_Preview.jpeg" alt="animal">
+                <img src="./assets/img/group150.png" alt="animal">
               </div>
               <div class="info">
                 <h3>Nguyễn Ngọc Thảo</h3>
-                <button class="btn-share">
-                  Share
+                <p>Lorem ipsum dolor, sit amet consectetur adipisicing elit. Quod, inventore aut nesciunt alias
+                  perspiciatis nulla totam eum ipsam neque magnam quis. Tempore beatae labore qui nostrum blanditiis,
+                  asperiores itaque culpa!</p>
+                <button class="btn-more modal-toggle">
+                  More
                 </button>
               </div>
             </div>
 
-            <div class="image-photo">
+            <div class="image-story">
               <div class="image">
-                <img src="./assets/img/pixta_1466420_M.jpg" alt="house">
+                <img src="./assets/img/group151.png" alt="woman">
               </div>
               <div class="info">
                 <h3>Nguyễn Ngọc Thảo</h3>
-                <button class="btn-share">
-                  Share
+                <p>Lorem ipsum dolor, sit amet consectetur adipisicing elit. Quod, inventore aut nesciunt alias
+                  perspiciatis nulla totam eum ipsam neque magnam quis. Tempore beatae labore qui nostrum blanditiis,
+                  asperiores itaque culpa!</p>
+                <button class="btn-more modal-toggle">
+                  More
                 </button>
               </div>
             </div>
 
-            <div class="image-photo">
+            <div class="image-story">
               <div class="image">
-                <img src="./assets/img/AdobeStock_126724528_Preview.jpeg" alt="bagoda">
+                <img src="./assets/img/group151.png" alt="animal">
               </div>
               <div class="info">
                 <h3>Nguyễn Ngọc Thảo</h3>
-                <button class="btn-share">
-                  Share
+                <p>Lorem ipsum dolor, sit amet consectetur adipisicing elit. Quod, inventore aut nesciunt alias
+                  perspiciatis nulla totam eum ipsam neque magnam quis. Tempore beatae labore qui nostrum blanditiis,
+                  asperiores itaque culpa!</p>
+                <button class="btn-more modal-toggle">
+                  More
                 </button>
               </div>
             </div>
 
-            <div class="image-photo">
+            <div class="image-story">
               <div class="image">
-                <img src="./assets/img/umeda_sky_build.jpg" alt="">
+                <img src="./assets/img/group150.png" alt="woman">
               </div>
               <div class="info">
                 <h3>Nguyễn Ngọc Thảo</h3>
-                <button class="btn-share">
-                  Share
+                <p>Lorem ipsum dolor, sit amet consectetur adipisicing elit. Quod, inventore aut nesciunt alias
+                  perspiciatis nulla totam eum ipsam neque magnam quis. Tempore beatae labore qui nostrum blanditiis,
+                  asperiores itaque culpa!</p>
+                <button class="btn-more modal-toggle">
+                  More
                 </button>
               </div>
             </div>
 
-            <div class="image-photo">
+            <div class="image-story">
               <div class="image">
-                <img src="./assets/img/AdobeStock_283983927_Preview.jpeg" alt="woman">
+                <img src="./assets/img/group150.png" alt="animal">
               </div>
               <div class="info">
                 <h3>Nguyễn Ngọc Thảo</h3>
-                <button class="btn-share">
-                  Share
+                <p>Lorem ipsum dolor, sit amet consectetur adipisicing elit. Quod, inventore aut nesciunt alias
+                  perspiciatis nulla totam eum ipsam neque magnam quis. Tempore beatae labore qui nostrum blanditiis,
+                  asperiores itaque culpa!</p>
+                <button class="btn-more modal-toggle">
+                  More
                 </button>
               </div>
             </div>
 
-            <div class="image-photo">
+            <div class="image-story">
               <div class="image">
-                <img src="./assets/img/151023_m.jpg" alt="tog">
-              </div>
-              <div class="info">
-                <h3>Nguyễn Thảo</h3>
-                <button class="btn-share">
-                  Share
-                </button>
-              </div>
-            </div>
-
-            <div class="image-photo">
-              <div class="image">
-                <img src="./assets/img/233685_m.jpg" alt="tree">
+                <img src="./assets/img/group151.png" alt="woman">
               </div>
               <div class="info">
                 <h3>Nguyễn Ngọc Thảo</h3>
-                <button class="btn-share">
-                  Share
+                <p>Lorem ipsum dolor, sit amet consectetur adipisicing elit. Quod, inventore aut nesciunt alias
+                  perspiciatis nulla totam eum ipsam neque magnam quis. Tempore beatae labore qui nostrum blanditiis,
+                  asperiores itaque culpa!</p>
+                <button class="btn-more modal-toggle">
+                  More
                 </button>
               </div>
             </div>
-
-            <div class="image-photo">
-              <div class="image">
-                <img src="./assets/img/1617788_m.jpg" alt="magic">
-              </div>
-              <div class="info">
-                <h3>Nguyễn Ngọc Thảo</h3>
-                <button class="btn-share">
-                  Share
-                </button>
-              </div>
-            </div>
-
-            <div class="image-photo">
-              <div class="image">
-                <img src="./assets/img/pixta_72090055_M.jpg" alt="house">
-              </div>
-              <div class="info">
-                <h3>Nguyễn Ngọc Thảo</h3>
-                <button class="btn-share">
-                  Share
-                </button>
-              </div>
-            </div>
-
           </li>
 
           <li class="photo-item">
-
-            <div class="image-photo">
+            <div class="image-story">
               <div class="image">
-                <img src="./assets/img/umeda_sky_build.jpg" alt="">
+                <img src="./assets/img/group150.png" alt="animal">
               </div>
               <div class="info">
                 <h3>Nguyễn Ngọc Thảo</h3>
-                <button class="btn-share">
-                  Share
+                <p>Lorem ipsum dolor, sit amet consectetur adipisicing elit. Quod, inventore aut nesciunt alias
+                  perspiciatis nulla totam eum ipsam neque magnam quis. Tempore beatae labore qui nostrum blanditiis,
+                  asperiores itaque culpa!</p>
+                <button class="btn-more modal-toggle">
+                  More
                 </button>
               </div>
             </div>
 
-            <div class="image-photo">
+            <div class="image-story">
               <div class="image">
-                <img src="./assets/img/AdobeStock_283983927_Preview.jpeg" alt="woman">
+                <img src="./assets/img/group151.png" alt="woman">
               </div>
               <div class="info">
                 <h3>Nguyễn Ngọc Thảo</h3>
-                <button class="btn-share">
-                  Share
+                <p>Lorem ipsum dolor, sit amet consectetur adipisicing elit. Quod, inventore aut nesciunt alias
+                  perspiciatis nulla totam eum ipsam neque magnam quis. Tempore beatae labore qui nostrum blanditiis,
+                  asperiores itaque culpa!</p>
+                <button class="btn-more modal-toggle">
+                  More
                 </button>
               </div>
             </div>
 
-            <div class="image-photo">
+            <div class="image-story">
               <div class="image">
-                <img src="./assets/img/151023_m.jpg" alt="tog">
-              </div>
-              <div class="info">
-                <h3>Nguyễn Thảo</h3>
-                <button class="btn-share">
-                  Share
-                </button>
-              </div>
-            </div>
-
-            <div class="image-photo">
-              <div class="image">
-                <img src="./assets/img/233685_m.jpg" alt="tree">
+                <img src="./assets/img/group151.png" alt="animal">
               </div>
               <div class="info">
                 <h3>Nguyễn Ngọc Thảo</h3>
-                <button class="btn-share">
-                  Share
+                <p>Lorem ipsum dolor, sit amet consectetur adipisicing elit. Quod, inventore aut nesciunt alias
+                  perspiciatis nulla totam eum ipsam neque magnam quis. Tempore beatae labore qui nostrum blanditiis,
+                  asperiores itaque culpa!</p>
+                <button class="btn-more modal-toggle">
+                  More
                 </button>
               </div>
             </div>
 
-            <div class="image-photo">
+            <div class="image-story">
               <div class="image">
-                <img src="./assets/img/AdobeStock_226817842_Preview.jpeg" alt="animal">
+                <img src="./assets/img/group150.png" alt="woman">
               </div>
               <div class="info">
                 <h3>Nguyễn Ngọc Thảo</h3>
-                <button class="btn-share">
-                  Share
+                <p>Lorem ipsum dolor, sit amet consectetur adipisicing elit. Quod, inventore aut nesciunt alias
+                  perspiciatis nulla totam eum ipsam neque magnam quis. Tempore beatae labore qui nostrum blanditiis,
+                  asperiores itaque culpa!</p>
+                <button class="btn-more modal-toggle">
+                  More
                 </button>
               </div>
             </div>
 
-            <div class="image-photo">
+            <div class="image-story">
               <div class="image">
-                <img src="./assets/img/pixta_1466420_M.jpg" alt="house">
+                <img src="./assets/img/group150.png" alt="animal">
               </div>
               <div class="info">
                 <h3>Nguyễn Ngọc Thảo</h3>
-                <button class="btn-share">
-                  Share
+                <p>Lorem ipsum dolor, sit amet consectetur adipisicing elit. Quod, inventore aut nesciunt alias
+                  perspiciatis nulla totam eum ipsam neque magnam quis. Tempore beatae labore qui nostrum blanditiis,
+                  asperiores itaque culpa!</p>
+                <button class="btn-more modal-toggle">
+                  More
                 </button>
               </div>
             </div>
 
-            <div class="image-photo">
+            <div class="image-story">
               <div class="image">
-                <img src="./assets/img/AdobeStock_126724528_Preview.jpeg" alt="bagoda">
+                <img src="./assets/img/group151.png" alt="woman">
               </div>
               <div class="info">
                 <h3>Nguyễn Ngọc Thảo</h3>
-                <button class="btn-share">
-                  Share
+                <p>Lorem ipsum dolor, sit amet consectetur adipisicing elit. Quod, inventore aut nesciunt alias
+                  perspiciatis nulla totam eum ipsam neque magnam quis. Tempore beatae labore qui nostrum blanditiis,
+                  asperiores itaque culpa!</p>
+                <button class="btn-more modal-toggle">
+                  More
                 </button>
               </div>
             </div>
-
-            <div class="image-photo">
-              <div class="image">
-                <img src="./assets/img/1617788_m.jpg" alt="magic">
-              </div>
-              <div class="info">
-                <h3>Nguyễn Ngọc Thảo</h3>
-                <button class="btn-share">
-                  Share
-                </button>
-              </div>
-            </div>
-
-            <div class="image-photo">
-              <div class="image">
-                <img src="./assets/img/pixta_72090055_M.jpg" alt="house">
-              </div>
-              <div class="info">
-                <h3>Nguyễn Ngọc Thảo</h3>
-                <button class="btn-share">
-                  Share
-                </button>
-              </div>
-            </div>
-
           </li>
 
+          <li class="photo-item">
+            <div class="image-story">
+              <div class="image">
+                <img src="./assets/img/group150.png" alt="animal">
+              </div>
+              <div class="info">
+                <h3>Nguyễn Ngọc Thảo</h3>
+                <p>Lorem ipsum dolor, sit amet consectetur adipisicing elit. Quod, inventore aut nesciunt alias
+                  perspiciatis nulla totam eum ipsam neque magnam quis. Tempore beatae labore qui nostrum blanditiis,
+                  asperiores itaque culpa!</p>
+                <button class="btn-more modal-toggle">
+                  More
+                </button>
+              </div>
+            </div>
+
+            <div class="image-story">
+              <div class="image">
+                <img src="./assets/img/group151.png" alt="woman">
+              </div>
+              <div class="info">
+                <h3>Nguyễn Ngọc Thảo</h3>
+                <p>Lorem ipsum dolor, sit amet consectetur adipisicing elit. Quod, inventore aut nesciunt alias
+                  perspiciatis nulla totam eum ipsam neque magnam quis. Tempore beatae labore qui nostrum blanditiis,
+                  asperiores itaque culpa!</p>
+                <button class="btn-more modal-toggle">
+                  More
+                </button>
+              </div>
+            </div>
+
+            <div class="image-story">
+              <div class="image">
+                <img src="./assets/img/group151.png" alt="animal">
+              </div>
+              <div class="info">
+                <h3>Nguyễn Ngọc Thảo</h3>
+                <p>Lorem ipsum dolor, sit amet consectetur adipisicing elit. Quod, inventore aut nesciunt alias
+                  perspiciatis nulla totam eum ipsam neque magnam quis. Tempore beatae labore qui nostrum blanditiis,
+                  asperiores itaque culpa!</p>
+                <button class="btn-more modal-toggle">
+                  More
+                </button>
+              </div>
+            </div>
+
+            <div class="image-story">
+              <div class="image">
+                <img src="./assets/img/group150.png" alt="woman">
+              </div>
+              <div class="info">
+                <h3>Nguyễn Ngọc Thảo</h3>
+                <p>Lorem ipsum dolor, sit amet consectetur adipisicing elit. Quod, inventore aut nesciunt alias
+                  perspiciatis nulla totam eum ipsam neque magnam quis. Tempore beatae labore qui nostrum blanditiis,
+                  asperiores itaque culpa!</p>
+                <button class="btn-more modal-toggle">
+                  More
+                </button>
+              </div>
+            </div>
+
+            <div class="image-story">
+              <div class="image">
+                <img src="./assets/img/group150.png" alt="animal">
+              </div>
+              <div class="info">
+                <h3>Nguyễn Ngọc Thảo</h3>
+                <p>Lorem ipsum dolor, sit amet consectetur adipisicing elit. Quod, inventore aut nesciunt alias
+                  perspiciatis nulla totam eum ipsam neque magnam quis. Tempore beatae labore qui nostrum blanditiis,
+                  asperiores itaque culpa!</p>
+                <button class="btn-more modal-toggle">
+                  More
+                </button>
+              </div>
+            </div>
+
+            <div class="image-story">
+              <div class="image">
+                <img src="./assets/img/group151.png" alt="woman">
+              </div>
+              <div class="info">
+                <h3>Nguyễn Ngọc Thảo</h3>
+                <p>Lorem ipsum dolor, sit amet consectetur adipisicing elit. Quod, inventore aut nesciunt alias
+                  perspiciatis nulla totam eum ipsam neque magnam quis. Tempore beatae labore qui nostrum blanditiis,
+                  asperiores itaque culpa!</p>
+                <button class="btn-more modal-toggle">
+                  More
+                </button>
+              </div>
+            </div>
+          </li>
         </ul>
       </div>
     </section>

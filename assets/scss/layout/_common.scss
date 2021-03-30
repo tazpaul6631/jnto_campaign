@@ -51,16 +51,16 @@ img {
 
   // Laptop 1200
   @media #{$info-laptop-smallest} {
-    max-width: calc(100% - 100px);
+    max-width: calc(100% - 120px);
   }
 
-  // Ipad Pro
-  @media #{$info-ipad-pro} {
-    max-width: calc(100% - 90px);
-  }
+  // // Ipad Pro
+  // @media #{$info-ipad-pro} {
+  //   max-width: calc(100% - 120px);
+  // }
 
   // Phone
   @media #{$info-phone-normal} {
-    max-width: calc(100% - 60px);
+    max-width: calc(100% - 70px);
   }
 }

@@ -8,7 +8,7 @@
   li {
     margin: 1rem;
     border-radius: 50%;
-    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.4);
+    box-shadow: 1px 3px 6px rgba(0, 0, 0, 0.4);
 
     // Laptop 1280
     @media #{$info-laptop-small} {
@@ -17,7 +17,7 @@
 
     // Phone
     @media #{$info-phone-normal} {
-      box-shadow: 0 3px 5px rgba(0, 0, 0, 0.4);
+      box-shadow: 1px 3px 5px rgba(0, 0, 0, 0.4);
     }
   }
 
@@ -30,6 +30,7 @@
     border-radius: 100%;
     background-color: #808080;
     text-indent: -9999px;
+    cursor: pointer;
 
     &:focus {
       outline: none;

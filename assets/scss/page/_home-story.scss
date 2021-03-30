@@ -13,19 +13,26 @@
     right: 30px;
     outline: none;
 
+    // Laptop 1368
+    @media #{$info-laptop-normal} {
+      bottom: 250px;
+    }
+
     // Ipad Pro
     @media #{$info-laptop-smallest} {
-      right: 10px;
+      right: 11px;
+      bottom: 200px;
     }
 
     // Ipad
     @media #{$info-ipad} {
-      right: 7px;
+      right: 15px;
+      bottom: 150px;
     }
 
     // Phone
     @media #{$info-phone-normal} {
-      right: 2px;
+      right: 5px;
     }
 
     .button-top__story {
@@ -206,6 +213,7 @@
       cursor: pointer;
       width: 400px;
       @include box-shadow(0, 5px, 15px, rgba(0, 0, 0, 0.4));
+      -webkit-tap-highlight-color: rgba(0, 0, 0, 0);
 
       &:hover {
         border: 1px solid white;
@@ -237,9 +245,13 @@
       // Phone
       @media #{$info-phone-normal} {
         padding: 3px 0 5px;
-        font-size: 13px;
+        font-size: 12px;
         border-radius: 9px;
-        width: 150px;
+        width: 140px;
+
+        &:hover {
+          @include box-shadow(3px, 3px, 8px, rgba(0, 0, 0, 0.5));
+        }
       }
     }
   }
@@ -253,7 +265,7 @@
 
   // Laptop 1440
   @media #{$info-laptop-medium} {
-    margin: 20px 0 20px;
+    margin: 20px 0 30px;
   }
 
   // Laptop 1280
@@ -406,7 +418,7 @@
   ////////////////////////////////////////
   // Modal
   .modal {
-    position: absolute;
+    position: fixed;
     z-index: 10000; /* 1 */
     top: 0;
     left: 0;
@@ -437,16 +449,18 @@
       background-color: #fff;
       box-shadow: 0 0 1.5em hsla(0, 0%, 0%, 0.35);
       position: fixed;
+      border-radius: 15px;
 
+      // Phone
       @media #{$info-phone-normal} {
         left: 0;
-        width: 100%;
-        margin: 0;
+        width: 80%;
+        margin: 0 10%;
       }
 
+      // Phone Small
       @media #{$info-phone-small} {
         left: 0;
-        margin-left: 0;
       }
 
       .modal-header,
@@ -458,7 +472,7 @@
         position: relative;
         background-color: #fff;
         box-shadow: 0 1px 2px hsla(0, 0%, 0%, 0.06);
-        border-bottom: 1px solid #e8e8e8;
+        background: border-box;
 
         .modal-close {
           position: absolute;
@@ -493,9 +507,29 @@
         }
 
         .modal-content {
+          p {
+            margin-bottom: 10px;
+          }
+
           .btn-close {
             float: right;
             margin-bottom: 20px;
+            background-color: green;
+            border-radius: 10px;
+            width: 50px;
+            border: 1px solid green;
+            font-size: 15px;
+            font-weight: bold;
+            color: white;
+            outline: none;
+            @include box-shadow(2px, 3px, 8px, rgba(0, 0, 0, 0.4));
+            cursor: pointer;
+            -webkit-tap-highlight-color: rgba(0, 0, 0, 0);
+
+            &:hover {
+              background-color: rgb(98, 180, 98);
+              border: 1px solid rgb(98, 180, 98);
+            }
           }
         }
       }
@@ -674,48 +708,48 @@
 
     .image-story {
       border-radius: 10px;
-      width: 85%;
-      height: 318px;
+      width: 80%;
+      height: 299px;
       position: relative;
       @include flex();
       justify-content: center;
 
       // Laptop 1440
       @media #{$info-laptop-medium} {
-        height: 308px;
+        height: 290px;
       }
 
       // Laptop 1368
       @media #{$info-laptop-normal} {
-        height: 280px;
+        height: 263px;
       }
 
       // Laptop 1280
       @media #{$info-laptop-small} {
-        height: 248px;
+        height: 233px;
       }
 
       // Laptop 1200
       @media #{$info-laptop-smallest} {
-        height: 270px;
+        height: 264px;
         width: 80%;
       }
 
       // Ipad Pro
       @media #{$info-ipad-pro} {
-        height: 223px;
+        height: 213px;
         width: 90%;
       }
 
       // Phone
       @media #{$info-phone-normal} {
-        height: 259px;
+        height: 252px;
         width: 100%;
       }
 
       // Phone Small
       @media #{$info-phone-small} {
-        height: 231px;
+        height: 224px;
       }
 
       .image {
@@ -797,8 +831,15 @@
         }
 
         p {
-          font-size: 18px;
+          font-size: 16px;
           margin-bottom: 15px;
+          display: inline;
+          -webkit-line-clamp: 7;
+          text-overflow: ellipsis;
+          overflow: hidden;
+          display: -webkit-box;
+          -webkit-box-orient: vertical;
+          word-wrap: break-word;
 
           // Laptop 1440
           @media #{$info-laptop-medium} {
@@ -830,6 +871,11 @@
           @media #{$info-phone-normal} {
             font-size: 14px;
           }
+
+          // Phone Small
+          @media #{$info-phone-small} {
+            font-size: 13px;
+          }
         }
 
         .btn-more {
@@ -846,6 +892,10 @@
           font-style: italic;
           padding: 5px 7px;
           @include box-shadow(2px, 3px, 8px, rgba(0, 0, 0, 0.4));
+
+          &:hover {
+            background-color: #ebeae9;
+          }
 
           // Laptop 1440
           @media #{$info-laptop-medium} {
@@ -1145,22 +1195,27 @@
 
       .prize {
         width: 100%;
-        height: 96px;
+        height: 150px;
         margin-bottom: 15px;
 
         // Laptop 1280
         @media #{$info-laptop-small} {
-          height: 90px;
+          height: 140px;
         }
 
         // Ipad Pro
         @media #{$info-laptop-smallest} {
-          height: 60px;
+          height: 130px;
         }
 
         // Ipad
         @media #{$info-ipad} {
-          height: 50px;
+          height: 120px;
+        }
+
+        // Phone
+        @media #{$info-phone-normal} {
+          height: 100px;
         }
 
         img {
@@ -1186,6 +1241,11 @@
         // Laptop 1200
         @media #{$info-laptop-smallest} {
           margin-left: 80px;
+        }
+
+        // Ipad Pro
+        @media #{$info-laptop-smallest} {
+          margin-left: 15px;
         }
 
         // Phone
@@ -1378,7 +1438,8 @@
 
             // Laptop 1280
             @media #{$info-laptop-small} {
-              height: 260px;
+              height: 250px;
+              width: 290px;
             }
 
             // Phone
@@ -1485,7 +1546,7 @@
 
         // Laptop 1280
         @media #{$info-laptop-small} {
-          font-size: 35px;
+          font-size: 30px;
         }
       }
 
@@ -1504,6 +1565,7 @@
         // Phone
         @media #{$info-phone-normal} {
           margin-bottom: 10px;
+          font-size: 25px;
         }
       }
     }
@@ -1596,6 +1658,67 @@
       .group-form-input {
         text-align: center;
 
+        .overlay {
+          position: fixed;
+          top: 0;
+          bottom: 0;
+          left: 0;
+          right: 0;
+          background: rgba(0, 0, 0, 0.7);
+          transition: opacity 500ms;
+          visibility: hidden;
+          opacity: 0;
+          z-index: 10000;
+
+          &:target {
+            visibility: visible;
+            opacity: 1;
+          }
+
+          .popup {
+            margin: 0 auto;
+            padding: 20px;
+            background: #fff;
+            border-radius: 5px;
+            width: 30%;
+            position: relative;
+            top: 40%;
+            // transition: all 5s ease-in-out;
+            
+
+            @media screen and (max-width: 700px){
+              width: 70%;
+            }    
+
+            h2 {
+              margin-top: 0;
+              color: #333;
+              font-family: Tahoma, Arial, sans-serif;
+            }
+
+            .close {
+              position: absolute;
+              top: 5px;
+              right: 15px;
+              transition: all 200ms;
+              font-size: 30px;
+              font-weight: bold;
+              text-decoration: none;
+              color: #333;
+              -webkit-tap-highlight-color: rgba(0, 0, 0, 0);
+
+              &:hover {
+                color: red;
+              }
+            }
+
+            .content {
+              max-height: 30%;
+              overflow: auto;
+            }
+          }
+        }
+
         .form-control {
           @include flex();
           align-items: stretch;
@@ -1640,7 +1763,7 @@
             // Phone
             @media #{$info-phone-normal} {
               font-size: 12px;
-              flex-basis: 35%;
+              flex-basis: 45%;
             }
 
             .error-lable {
@@ -1695,6 +1818,7 @@
               border: hidden;
               background-color: #fff3f7;
               border: 1px solid #29abe2;
+              width: 90%;
 
               // Laptop 1368
               @media #{$info-laptop-normal} {
@@ -1710,6 +1834,8 @@
               // Phone
               @media #{$info-phone-normal} {
                 font-size: 10px;
+                width: 80%;
+                padding: 7px;
               }
             }
 
@@ -1977,6 +2103,7 @@
 
             a {
               color: blue;
+              -webkit-tap-highlight-color: rgba(0, 0, 0, 0);
             }
           }
         }

@@ -1,12 +1,12 @@
 $(document).ready(function () {
-  $(".dropdown").on("click", function (e) {
-    var target = $(e.target);
-    var dropdown = target.closest(".dropdown");
-    return (
-      !dropdown.hasClass("open") ||
-      !target.hasClass("dropdown-menu__search__input")
-    );
-  });
+  // $(".dropdown").on("click", function (e) {
+  //   var target = $(e.target);
+  //   var dropdown = target.closest(".dropdown");
+  //   return (
+  //     !dropdown.hasClass("open") ||
+  //     !target.hasClass("dropdown-menu__search__input")
+  //   );
+  // });
 
   ///////////////////////////////////////////////
   // Slick Banner
@@ -181,7 +181,10 @@ $(document).ready(function () {
   });
 });
 
+/////////////////////////////////////
+// Set btn disable
 document.getElementById("btnSubmit").disabled = true;
+
 ////////////////////////////////////
 //Validate Check (term & condition)
 function goFurther() {
@@ -228,6 +231,8 @@ function readURL(input) {
   }
 }
 
+///////////////////////////////////////////////
+// Remove upload
 function removeUpload() {
   $(".file-upload-input").replaceWith($(".file-upload-input").clone());
   $(".file-upload-content").hide();

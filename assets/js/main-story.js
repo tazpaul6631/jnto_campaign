@@ -72,6 +72,7 @@ $(document).ready(function () {
     const phoneValue = phone.value;
     const emailValue = email.value.trim();
     const descValue = desc.value.trim();
+    console.log(validateNumber(phoneValue.length < 10));
 
     if (nameValue === "") {
       setErrorFor(name, "* Name không được để trống!");

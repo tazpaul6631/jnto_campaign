@@ -1,12 +1,4 @@
 $(document).ready(function () {
-  // $(".dropdown").on("click", function (e) {
-  //   var target = $(e.target);
-  //   var dropdown = target.closest(".dropdown");
-  //   return (
-  //     !dropdown.hasClass("open") ||
-  //     !target.hasClass("dropdown-menu__search__input")
-  //   );
-  // });
 
   ///////////////////////////////////////////////
   // Slick Banner
@@ -59,6 +51,7 @@ $(document).ready(function () {
   let phone = document.getElementById("phone");
   let email = document.getElementById("email");
   let desc = document.getElementById("desc");
+  console.log(phone);
 
   form.addEventListener("submit", (e) => {
     e.preventDefault();
@@ -72,8 +65,7 @@ $(document).ready(function () {
     const phoneValue = phone.value;
     const emailValue = email.value.trim();
     const descValue = desc.value.trim();
-    console.log(validateNumber(phoneValue.length < 10));
-
+    console.log(phoneValue);
     if (nameValue === "") {
       setErrorFor(name, "* Name không được để trống!");
     } else {
@@ -88,8 +80,6 @@ $(document).ready(function () {
 
     if (phoneValue === "") {
       setErrorFor(phone, "* Phone không được để trống!");
-    } else if (!validateNumber(phoneValue)) {
-      setErrorFor(phone, "* Phone không đúng!");
     } else {
       setSuccessFor(phone);
     }
@@ -123,9 +113,11 @@ $(document).ready(function () {
     formControl.className = "form-control success";
   }
 
-  function validateNumber(phone) {
-    return /^\+?([0-9]{2})\)?[-. ]?([0-9]{4})[-. ]?([0-9]{4})$/.test(phone);
-  }
+  //////////////////////////
+  // Validate phone number
+  document.getElementById('phone').addEventListener('input', function(e) {
+    this.value = this.value.replace(/[^0-9.]/g, '').replace(/(\..*)\./g, '$1');
+  })
 
   function isEmail(email) {
     const re = /^(([^<>()[\]\\.,;:\s@"]+(\.[^<>()[\]\\.,;:\s@"]+)*)|(".+"))@((\[[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\])|(([a-zA-Z\-0-9]+\.)+[a-zA-Z]{2,}))$/;

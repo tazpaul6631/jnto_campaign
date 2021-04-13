@@ -749,7 +749,7 @@
 
       // Phone Small
       @media #{$info-phone-small} {
-        height: 224px;
+        height: 212px;
       }
 
       .image {
@@ -946,12 +946,12 @@
 
     h3 {
       font-family: BrushScript;
-      font-size: 40px;
+      font-size: 45px;
       padding-top: 60px;
 
       // Laptop 1368
       @media #{$info-laptop-normal} {
-        font-size: 30px;
+        font-size: 40px;
         padding-top: 40px;
       }
 
@@ -1113,11 +1113,10 @@
       .image-rule {
         @include flex();
         flex-direction: column;
-        justify-content: space-evenly;
+        justify-content: space-around;
 
         // Ipad Pro
         @media #{$info-laptop-smallest} {
-          @include flex();
           flex-direction: row;
           margin: 10px 0;
         }
@@ -1129,38 +1128,33 @@
 
         // Phone
         @media #{$info-phone-normal} {
-          margin: 10px 0;
+          margin: 0;
+          flex-direction: column;
         }
 
         .image-rule-top,
         .image-rule-bottom {
-          width: 340px;
-          height: 260px;
-          margin: 10px 0;
+          width: 310px;
 
           // Laptop 1368
           @media #{$info-laptop-normal} {
-            width: 250px;
-            height: 200px;
+            width: 290px;
           }
 
           // Ipad
           @media #{$info-ipad} {
-            width: 50%;
-            height: auto;
-            margin: 15px;
+            width: 40%;
           }
 
           // Phone
           @media #{$info-phone-normal} {
-            margin: 5px;
-            width: 80%;
+            width: 70%;
+            margin: 10px 0;
           }
 
           img {
-            border-radius: 30px;
             width: 100%;
-            height: 100%;
+            object-fit: contain;
 
             // Laptop 1368
             @media #{$info-laptop-normal} {
@@ -1193,34 +1187,80 @@
         padding-bottom: 0;
       }
 
-      .prize {
-        width: 100%;
-        height: 150px;
-        margin-bottom: 15px;
+      .group-roll {
+        position: relative;
 
-        // Laptop 1280
-        @media #{$info-laptop-small} {
-          height: 140px;
-        }
-
-        // Ipad Pro
-        @media #{$info-laptop-smallest} {
-          height: 130px;
-        }
-
-        // Ipad
-        @media #{$info-ipad} {
-          height: 120px;
-        }
-
-        // Phone
-        @media #{$info-phone-normal} {
-          height: 100px;
-        }
-
-        img {
+        .prize {
           width: 100%;
-          height: 100%;
+          height: 100px;
+          margin-bottom: 15px;
+
+          // Laptop 1440
+          @media #{$info-laptop-medium} {
+            height: 95px;
+          }
+  
+          // Laptop 1280
+          @media #{$info-laptop-small} {
+            height: 86px;
+          }
+  
+          // Ipad Pro
+          @media #{$info-laptop-smallest} {
+            height: 80px;
+          }
+  
+          // Ipad
+          @media #{$info-ipad} {
+            height: 75px;
+          }
+  
+          // Phone
+          @media #{$info-phone-normal} {
+            height: 50px;
+          }
+  
+          img {
+            width: 100%;
+            height: 100%;
+          }
+        }
+
+        p{
+          font-size: 40px;
+          font-family: UTMAvoBold;
+          position: absolute;
+          top: 50%;
+          left: 50%;
+          transform: translate(-50%, -100%);
+          color: #FFFFFF;
+
+          // Laptop 1440
+          @media #{$info-laptop-medium} {
+            font-size: 35px;
+          }
+  
+          // Laptop 1280
+          @media #{$info-laptop-small} {
+            font-size: 30px;
+            transform: translate(-50%, -105%);
+          }
+  
+          // Ipad Pro
+          @media #{$info-laptop-smallest} {
+            font-size: 28px;
+            transform: translate(-50%, -110%);
+          }
+  
+          // Ipad
+          @media #{$info-ipad} {
+            font-size: 25px;
+          }
+  
+          // Phone
+          @media #{$info-phone-normal} {
+            font-size: 20px;
+          }
         }
       }
 
@@ -1245,7 +1285,12 @@
 
         // Ipad Pro
         @media #{$info-laptop-smallest} {
-          margin-left: 15px;
+          margin-left: 75px;
+        }
+
+        // Ipad
+        @media #{$info-ipad} {
+          margin-left: 20px;
         }
 
         // Phone
@@ -1313,7 +1358,7 @@
 
             // Phone
             @media #{$info-phone-normal} {
-              font-size: 100px;
+              font-size: 80px;
             }
           }
 
@@ -1354,58 +1399,9 @@
                 font-size: 25px;
               }
 
-              // Ipad Pro
-              @media #{$info-laptop-smallest} {
-                font-size: 20px;
-              }
-
               // Phone
               @media #{$info-phone-normal} {
-                font-size: 15px;
-              }
-            }
-
-            .first-price {
-              margin-top: 10px;
-              background-color: red;
-              color: white;
-              padding: 0 5px 8px;
-              width: 100%;
-              height: 40px;
-              font-size: 25px;
-              font-family: UTMAvoBold;
-              @include flex();
-              align-items: center;
-              justify-content: center;
-
-              // Laptop 1440
-              @media #{$info-laptop-medium} {
-                margin-top: 10px;
-                height: 35px;
                 font-size: 20px;
-                padding: 0 10px 5px;
-              }
-
-              // Laptop 1280
-              @media #{$info-laptop-small} {
-                height: 30px;
-                font-size: 18px;
-                padding: 0 1px 5px;
-              }
-
-              // Ipad Pro
-              @media #{$info-laptop-smallest} {
-                height: 25px;
-                font-size: 16px;
-                padding: 0 5px 5px;
-              }
-
-              // Phone
-              @media #{$info-phone-normal} {
-                margin-top: 5px;
-                height: 30px;
-                font-size: 13px;
-                padding: 0 0px 5px;
               }
             }
           }
